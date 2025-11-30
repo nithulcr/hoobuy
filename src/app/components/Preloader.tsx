@@ -49,7 +49,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     >
       <div className=" ">
 
-        <img src="/logo.png" alt="Logo" width={200} height={70} className="w-[180px]" />
+        <img src="/logo.png" alt="Logo" width={240} height={100} className="w-[240px]" />
 
       </div>
 
