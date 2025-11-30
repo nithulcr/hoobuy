@@ -7,7 +7,7 @@
   --color: #282828;
   --siteColor: #1a5867;
   --siteColor2: #73bd44;
-  --siteColor3: #c8e0b6;
+  --siteColor3: #e1efd7;
 
 }
 @theme inline {
@@ -169,8 +169,8 @@ height:100%;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.642), rgba(30, 21, 195, 0.347), transparent); */
- box-shadow: inset 0 0 0 2000px #1a586733;
+  background: linear-gradient(45deg, #1a5867, transparent);
+ /* box-shadow: inset 0 0 0 2000px #1a586733; */
   z-index: 1;
 
 }

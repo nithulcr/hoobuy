@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--siteColor)] rounded-3xl mt-8 mb-4 text-white font-normal">
       <div className="max-w-[1360px] mx-auto py-14 lg:py-20  px-6">
-        <div className="heading flex flex-col gap-4 md:flex-row justify-between md:items-center  mx-auto mb-10 md:mb-14 border-b  border-gray-300 border-dashed pb-7">
+        <div className="heading flex flex-col gap-4 md:flex-row justify-between md:items-center  mx-auto mb-10 md:mb-14 border-b  border-gray-400 border-dashed pb-7">
           <div>
 
             <h2 className="text-left fade-up-stagger text-2xl lg:text-[28px] max-w-[340px] font-normal mb-1 leading-tight text-white">
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 justify-between gap-8">
           {/* Logo */}
           <div className="flex flex-col">
-            <img src="/logo-white.png" alt="Logo" width={140} height={50} className="w-[140px] mb-4" />
+            <img src="/logo-white.png" alt="Logo" width={200} height={80} className="w-[200px] mb-4" />
 
             <p className="font-normal text-[15px]">Felis consquat magnis fames sagittis ultrices plasodales porttitor quisque ultrice tempor turpis.</p>
             <div className="flex flex-row gap-4 mt-4">
@@ -59,11 +59,10 @@ export default function Footer() {
 
           </div>
           {/* Services & About Us */}
-          <div className="col-span-2 grid sm:grid-cols-3 gap-8">
+          <div className="col-span-2 grid sm:grid-cols-2 gap-8 lg:pl-15">
             <div>
               <h2 className="text-xl font-semibold flex flex-col ">
                 Usful Links
-                <span className="border-b border-dashed w-[70px] mt-3"></span>
               </h2>
               <ul className="space-y-3 mt-8">
 
@@ -81,13 +80,7 @@ export default function Footer() {
 
                   About
                 </li>
-                <li className="flex items-center gap-4 text-[15px]">
-                  <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.0489 12.631L12.8614 19.0997C12.7324 19.2346 12.5574 19.3104 12.375 19.3104C12.1926 19.3104 12.0176 19.2346 11.8886 19.0997C11.7596 18.9649 11.6871 18.782 11.6871 18.5912C11.6871 18.4005 11.7596 18.2176 11.8886 18.0827L16.903 12.8412H3.4375C3.25516 12.8412 3.0803 12.7655 2.95136 12.6307C2.82243 12.4959 2.75 12.3131 2.75 12.1225C2.75 11.9318 2.82243 11.749 2.95136 11.6142C3.0803 11.4794 3.25516 11.4037 3.4375 11.4037H16.903L11.8886 6.16224C11.7596 6.02737 11.6871 5.84445 11.6871 5.65372C11.6871 5.46299 11.7596 5.28007 11.8886 5.1452C12.0176 5.01034 12.1926 4.93457 12.375 4.93457C12.5574 4.93457 12.7324 5.01034 12.8614 5.1452L19.0489 11.614C19.1128 11.6807 19.1635 11.76 19.1981 11.8472C19.2327 11.9345 19.2505 12.028 19.2505 12.1225C19.2505 12.2169 19.2327 12.3105 19.1981 12.3977C19.1635 12.485 19.1128 12.5642 19.0489 12.631Z" fill="white" />
-                  </svg>
-
-                 Locations
-                </li>
+              
                 <li className="flex items-center gap-4 text-[15px]">
                   <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.0489 12.631L12.8614 19.0997C12.7324 19.2346 12.5574 19.3104 12.375 19.3104C12.1926 19.3104 12.0176 19.2346 11.8886 19.0997C11.7596 18.9649 11.6871 18.782 11.6871 18.5912C11.6871 18.4005 11.7596 18.2176 11.8886 18.0827L16.903 12.8412H3.4375C3.25516 12.8412 3.0803 12.7655 2.95136 12.6307C2.82243 12.4959 2.75 12.3131 2.75 12.1225C2.75 11.9318 2.82243 11.749 2.95136 11.6142C3.0803 11.4794 3.25516 11.4037 3.4375 11.4037H16.903L11.8886 6.16224C11.7596 6.02737 11.6871 5.84445 11.6871 5.65372C11.6871 5.46299 11.7596 5.28007 11.8886 5.1452C12.0176 5.01034 12.1926 4.93457 12.375 4.93457C12.5574 4.93457 12.7324 5.01034 12.8614 5.1452L19.0489 11.614C19.1128 11.6807 19.1635 11.76 19.1981 11.8472C19.2327 11.9345 19.2505 12.028 19.2505 12.1225C19.2505 12.2169 19.2327 12.3105 19.1981 12.3977C19.1635 12.485 19.1128 12.5642 19.0489 12.631Z" fill="white" />
@@ -112,10 +105,9 @@ export default function Footer() {
               
               </ul>
             </div>
-            <div className="col-span-2">
+            <div className="">
               <h2 className="text-xl font-semibold  flex flex-col ">
                 Property Types
-                <span className="border-b border-dashed w-[70px] mt-3"></span>
               </h2>
               <ul className="space-y-3 mt-8">
 
@@ -140,6 +132,19 @@ export default function Footer() {
 
                   Commercial
                 </li>
+                <li className="flex items-center gap-4 text-[15px]">
+                  <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.0489 12.631L12.8614 19.0997C12.7324 19.2346 12.5574 19.3104 12.375 19.3104C12.1926 19.3104 12.0176 19.2346 11.8886 19.0997C11.7596 18.9649 11.6871 18.782 11.6871 18.5912C11.6871 18.4005 11.7596 18.2176 11.8886 18.0827L16.903 12.8412H3.4375C3.25516 12.8412 3.0803 12.7655 2.95136 12.6307C2.82243 12.4959 2.75 12.3131 2.75 12.1225C2.75 11.9318 2.82243 11.749 2.95136 11.6142C3.0803 11.4794 3.25516 11.4037 3.4375 11.4037H16.903L11.8886 6.16224C11.7596 6.02737 11.6871 5.84445 11.6871 5.65372C11.6871 5.46299 11.7596 5.28007 11.8886 5.1452C12.0176 5.01034 12.1926 4.93457 12.375 4.93457C12.5574 4.93457 12.7324 5.01034 12.8614 5.1452L19.0489 11.614C19.1128 11.6807 19.1635 11.76 19.1981 11.8472C19.2327 11.9345 19.2505 12.028 19.2505 12.1225C19.2505 12.2169 19.2327 12.3105 19.1981 12.3977C19.1635 12.485 19.1128 12.5642 19.0489 12.631Z" fill="white" />
+                  </svg>
+                  Home
+                </li>
+                <li className="flex items-center gap-4 text-[15px]">
+                  <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.0489 12.631L12.8614 19.0997C12.7324 19.2346 12.5574 19.3104 12.375 19.3104C12.1926 19.3104 12.0176 19.2346 11.8886 19.0997C11.7596 18.9649 11.6871 18.782 11.6871 18.5912C11.6871 18.4005 11.7596 18.2176 11.8886 18.0827L16.903 12.8412H3.4375C3.25516 12.8412 3.0803 12.7655 2.95136 12.6307C2.82243 12.4959 2.75 12.3131 2.75 12.1225C2.75 11.9318 2.82243 11.749 2.95136 11.6142C3.0803 11.4794 3.25516 11.4037 3.4375 11.4037H16.903L11.8886 6.16224C11.7596 6.02737 11.6871 5.84445 11.6871 5.65372C11.6871 5.46299 11.7596 5.28007 11.8886 5.1452C12.0176 5.01034 12.1926 4.93457 12.375 4.93457C12.5574 4.93457 12.7324 5.01034 12.8614 5.1452L19.0489 11.614C19.1128 11.6807 19.1635 11.76 19.1981 11.8472C19.2327 11.9345 19.2505 12.028 19.2505 12.1225C19.2505 12.2169 19.2327 12.3105 19.1981 12.3977C19.1635 12.485 19.1128 12.5642 19.0489 12.631Z" fill="white" />
+                  </svg>
+
+                  Residential Plots
+                </li>
               
               </ul>
             </div>
@@ -148,7 +153,6 @@ export default function Footer() {
           <div>
             <h2 className="text-xl  font-semibold flex flex-col">
               Office Inforamtion
-              <span className="border-b border-dashed w-[70px] mt-3"></span>
             </h2>
             <ul className="space-y-5 mt-8">
 
@@ -161,7 +165,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col gap-1">
                   <span className="opacity-60 text-[14px]">Call Us 24/7</span>
-                  <span className="">+971 50 954 8130</span>
+                  <span className="">+91 999 99 99999</span>
                 </div>
               </li>
               <li className="flex items-center gap-4 text-[15px]">
@@ -174,7 +178,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col gap-1">
                   <span className="opacity-60 text-[14px]">Work with us</span>
-                  <a href="mailto:Info@safeattestuae.com"  className="">Info@safeattestuae.com</a>
+                  <a href="mailto:Info@safeattestuae.com"  className="">Info@hoobuy.com</a>
                 </div>
               </li>
               <li className="flex gap-4 text-[15px]">
@@ -187,7 +191,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col gap-1">
                   <span className="opacity-60 text-[14px]">Our Location</span>
-                  <span className="">Al Saqar Business Tower, 13th Floor, Sheikh Zayed Road</span>
+                  <span className="">Kannur, Kerala</span>
                 </div>
               </li>
             </ul>
@@ -200,7 +204,7 @@ export default function Footer() {
 
 
       </div>
-      <div className="border-t border-dashed border-gray-300 px-6">
+      <div className="border-t border-dashed border-gray-400 px-6">
         <div className="py-8 text-xs  text-center">HooBuy - Copyright 2025. All rights reserved.</div>
 
       </div>
