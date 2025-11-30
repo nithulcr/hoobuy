@@ -72,7 +72,7 @@ const propertyEn = [
 
 ];
 
-export default function property() {
+export default function Property() {
     const property = propertyEn;
     const fadeRef = useRef<HTMLHeadingElement>(null);
     useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);

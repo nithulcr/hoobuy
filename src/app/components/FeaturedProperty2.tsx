@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
@@ -67,7 +66,7 @@ const property2En = [
 
 ];
 
-export default function property2() {
+export default function Property2() {
     const property2 = property2En;
     const fadeRef = useRef<HTMLHeadingElement>(null);
     useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
