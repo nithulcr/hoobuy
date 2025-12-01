@@ -79,7 +79,7 @@ export default function Property() {
 
 
     return (
-        <section id="property" className="py-12 lg:py-20  relative bg-white rounded-3xl">
+        <section id="property" className="py-14 lg:py-24   relative bg-white rounded-3xl">
             <div className="max-w-[1360px] mx-auto px-6 ">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

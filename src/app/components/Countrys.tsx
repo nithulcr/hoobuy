@@ -91,7 +91,7 @@ export default function DistrictsPage() {
     const row3 = features.slice(11, 14);
 
     return (
-        <section id="features" className="py-12 lg:py-20  relative ">
+        <section id="features" className="py-14 lg:py-24  relative ">
             <div className="max-w-[1360px] mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

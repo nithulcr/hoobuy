@@ -33,7 +33,7 @@ const AllCountrysPage = () => {
                 heading_en="All Countries"
                 breadcrumbPosition="left"
             />
-            <section className="py-12 lg:py-20">
+            <section className="py-14 lg:py-24 ">
                 <div className="max-w-[1360px] mx-auto px-6">
                     <div className="flex flex-wrap justify-center gap-2 mb-10">
                         {alphabet.map((letter) => (
