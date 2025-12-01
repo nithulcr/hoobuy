@@ -3,17 +3,18 @@ import AnimatedButton from "./AnimatedButton";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--siteColor)] rounded-3xl mt-8 mb-4 text-white font-normal">
+    <footer>
+    <div className="bg-[var(--siteColor)] rounded-3xl mt-8  text-white font-normal">
       <div className="max-w-[1360px] mx-auto py-14 lg:py-20  px-6">
-        <div className="heading flex flex-col gap-4 md:flex-row justify-between md:items-center  mx-auto mb-10 md:mb-14 border-b  border-gray-400 border-dashed pb-7">
+        <div className="heading bg-[var(--siteColor3)] flex flex-col gap-4 md:flex-row justify-between md:items-center mb-10 md:mb-14 rounded-2xl mx-auto p-10 border-b  border-gray-400 border-dashed pb-7">
           <div>
 
-            <h2 className="text-left fade-up-stagger text-2xl lg:text-[28px] max-w-[340px] font-normal mb-1 leading-tight text-white">
+            <h2 className="text-left fade-up-stagger text-2xl lg:text-[28px] max-w-[340px] font-normal mb-1 leading-tight text-site">
              Unlock Your Perfect Property Package
             </h2>
           </div>
           <AnimatedButton type="submit"
-            label="Let's Talk" className="w-fit transparent-btn transparent-btn4" />
+            label="Let's Talk" className="w-fit" />
         </div>
         <div className="grid lg:grid-cols-4 justify-between gap-8">
           {/* Logo */}
@@ -204,8 +205,10 @@ export default function Footer() {
 
 
       </div>
-      <div className="border-t border-dashed border-gray-400 px-6">
-        <div className="py-8 text-xs  text-center">HooBuy - Copyright 2025. All rights reserved.</div>
+      
+    </div>
+    <div className="px-6">
+        <div className="py-5 text-sm  text-center">HooBuy - Copyright 2025. All rights reserved.</div>
 
       </div>
     </footer>
