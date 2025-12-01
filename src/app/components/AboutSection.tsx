@@ -68,8 +68,8 @@ const Services = () => {
   useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
 
   return (
-    <section id="services" className="section py-14 lg:py-24 overflow-hidden px-6">
-      <div className="grid-wrapper max-w-[1360px] mx-auto px-6">
+    <section id="services" className="section py-14 lg:py-24 overflow-hidden px-3 lg:px-6">
+      <div className="grid-wrapper max-w-[1360px] mx-auto lg:px-6">
         <div className="stacked-content">
           <div className="content-wrapper">
             <div className="service-list grid gap-y-10 lg:gap-y-30">
@@ -97,7 +97,7 @@ const Services = () => {
                       transition={{ duration: 0.5 }}
                       className="heading flex flex-col max-w-[500px] mx-auto mb-4"
                     >
-                      <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                      <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                         <Image
                           src="/favicon.png"
                           alt="Logo"
@@ -109,7 +109,7 @@ const Services = () => {
                       </div>
                       <h2
                         ref={fadeRef}
-                        className="fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site"
+                        className="fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site"
                       >
                         {service.subtitle}
                       </h2>
@@ -156,7 +156,7 @@ const ServiceMedia = ({
   bgClassRight: string;
 }) => (
   <div className="service-image w-full">
-    <div className="large-growing-images small flex gap-4 w-full rounded-4xl">
+    <div className="large-growing-images small flex gap-4 w-full rounded-2xl lg:rounded-4xl">
       <div className="growing-image small relative" style={{ width: "80%" }}>
         <div className={`growing-background ${bgClassLeft} absolute inset-0`}>
           <video

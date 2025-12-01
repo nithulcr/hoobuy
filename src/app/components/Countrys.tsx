@@ -98,7 +98,7 @@ export default function DistrictsPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[500px] mx-auto mb-5">
-                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                         <Image
                             src="/favicon.png"
                             alt="Logo"
@@ -108,14 +108,14 @@ export default function DistrictsPage() {
                         />
                         Experts All
                     </div>
-                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
+                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
                         Explore by Property District
                     </h2>
                 </motion.div>
-                <div className="flex flex-col gap-3 bg-white rounded-2xl p-10 w-fit mx-auto">
+                <div className="flex flex-col lg:gap-3 gap-2 bg-white rounded-2xl p-10 w-fit mx-auto">
 
                     <div
-                        className="flex items-center justify-center flex-wrap gap-3  relative  ">
+                        className="flex items-center justify-center flex-wrap lg:gap-3 gap-2  relative  ">
                         {row1.map((feature, index) => (
                             <motion.div
                                 key={`${feature.title}-${index}`}
@@ -126,7 +126,7 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
                                 >
 
                                     <span className="flex items-center justify-center bg-white rounded-full p-1">
@@ -152,14 +152,14 @@ export default function DistrictsPage() {
                                         </svg>
 
                                     </span>
-                                    <h3 className="text-[15px] pr-4 font-light">{feature.title}</h3>
+                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>
                         ))}
                     </div>
                     <div
-                        className="flex items-center justify-center flex-wrap gap-3  relative  ">
+                        className="flex items-center justify-center flex-wrap lg:gap-3 gap-2  relative  ">
                         {row2.map((feature, index) => (
                             <motion.div
                                 key={`${feature.title}-${index}`}
@@ -170,7 +170,7 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
                                 >
 
                                     <span className="flex items-center justify-center bg-white rounded-full p-1">
@@ -196,14 +196,14 @@ export default function DistrictsPage() {
                                         </svg>
 
                                     </span>
-                                    <h3 className="text-[15px] pr-4 font-light">{feature.title}</h3>
+                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>
                         ))}
                     </div>
                     <div
-                        className="flex items-center justify-center flex-wrap gap-3  relative  ">
+                        className="flex items-center justify-center flex-wrap lg:gap-3 gap-2  relative  ">
                         {row3.map((feature, index) => (
                            <motion.div
                                 key={`${feature.title}-${index}`}
@@ -214,7 +214,7 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
                                 >
 
                                     <span className="flex items-center justify-center bg-white rounded-full p-1">
@@ -240,7 +240,7 @@ export default function DistrictsPage() {
                                         </svg>
 
                                     </span>
-                                    <h3 className="text-[15px] pr-4 font-light">{feature.title}</h3>
+                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>

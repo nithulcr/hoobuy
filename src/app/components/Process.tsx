@@ -69,11 +69,11 @@ const ProcessMain = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }} className="heading flex flex-col gap-4 md:flex-row justify-between items-center  mx-auto mb-10 md:mb-14">
           <div>
-            <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm justify-center md:justify-start">
+            <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm justify-center md:justify-start">
               <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
               working Process
             </div>
-            <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-2xl lg:text-[36px]  font-medium mb-1 leading-tight text-site">
+            <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px]  font-medium mb-1 leading-tight text-site">
               Strategies & Insights.
             </h2>
           </div>

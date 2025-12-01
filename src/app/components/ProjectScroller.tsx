@@ -86,14 +86,14 @@ export default function ProjectsScroller() {
     return (
         <section
             ref={sectionRef}
-            className="lg:py-10 lg:py-24  relative mx-[-20px]"
+            className="py-10 lg:py-24  relative lg:mx-[-20px] mx-[-10px]"
         >
-            <div className="space-y-8">
+            <div className="md:space-y-8 space-y-4">
 
                 <div className="overflow-hidden">
                     <div
                         ref={topRowRef}
-                        className="flex gap-6 will-change-transform"
+                        className="flex gap-3 md:gap-6 will-change-transform"
                     >
                         {topRowImages.map((src, i) => (
                             <div

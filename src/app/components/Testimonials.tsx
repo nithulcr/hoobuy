@@ -81,7 +81,7 @@ export default function Testimonials() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[550px] mx-auto mb-10">
-                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                         <Image
                                                     src="/favicon.png"
                                                     alt="Logo"
@@ -91,7 +91,7 @@ export default function Testimonials() {
                                                 />
                        read reviews
                     </div>
-                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
+                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
                        Stories of trust
                     </h2>
                 </motion.div>

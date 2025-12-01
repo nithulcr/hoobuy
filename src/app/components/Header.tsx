@@ -84,7 +84,7 @@ export default function Header() {
             className={[
                 "content-center fixed top-0  left-0 z-50  transition-colors duration-300 bg-nav mx-2  md:mx-5 w-[-webkit-fill-available]",
                 scrolled ? "bg-nav-cover" : "",
-                pathname === "/" ? "index mt-2 md:mt-0" : "",
+                pathname === "/" ? "index" : "",
             ]
                 .filter(Boolean)
                 .join(" ")}

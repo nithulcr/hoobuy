@@ -80,18 +80,18 @@ export default function Property() {
 
     return (
         <section id="property" className="py-12 lg:py-20  relative bg-white rounded-3xl">
-            <div className="max-w-[1360px] mx-auto px-3 lg:px-6 ">
+            <div className="max-w-[1360px] mx-auto px-6 ">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }} className="heading flex  items-center justify-between mb-10">
+                    transition={{ duration: 0.5 }} className="heading flex flex-col md:flex-row   md:items-center justify-between mb-10">
                     <div className="max-w-[400px]">
-                        <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                        <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                             <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
                             Best Properties
                         </div>
-                        <h2 ref={fadeRef} className="fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
+                        <h2 ref={fadeRef} className="fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
                             Best Properties For Sale in Kerala
                         </h2>
                     </div>

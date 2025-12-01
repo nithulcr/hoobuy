@@ -132,12 +132,12 @@ export default function Features() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[500px] mx-auto mb-10">
-                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-sm">
+                    transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[560px] mx-auto mb-10">
+                    <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                         <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
                         Why Choose Us
                     </div>
-                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
+                    <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
                       Providing exceptional service and value to our clients
                     </h2>
                 </motion.div>

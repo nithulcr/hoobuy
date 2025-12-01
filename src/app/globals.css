@@ -88,6 +88,11 @@ font-family: "Mona Sans", sans-serif;
 .font-light2 {
   font-weight: 200;
 }
+.hero-section{
+  background: url(/bg4.jpg);
+  background-position:right bottom;
+  background-size: cover;
+}
 .hero2-bg:before{
 content: '';
 position: absolute;
@@ -467,7 +472,7 @@ h1 span{
 }
 @media (max-width: 990px) {
   .index-page .bg-nav-cover {
-    top: -12px!important;
+    top: -0px!important;
   }
   .process-slide .swiper{
   padding-left: 20px;
@@ -506,5 +511,9 @@ h1 span{
 }
 .megamenu-active-tab {
     background: var(--background);
+}
+.hero-section{
+  background: url(/bg-mob.jpg);
+  background-position:center bottom;
 }
 }

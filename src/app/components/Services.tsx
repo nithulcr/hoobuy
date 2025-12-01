@@ -146,12 +146,12 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }} className="heading flex flex-col items-center max-w-[650px] mx-auto mb-14 mx-auto px-6">
-          <div className="flex items-center gap-2 mb-3 uppercase text-sm text-white">
+          <div className="flex items-center gap-2 mb-3 uppercase text-xs lg:text-sm text-white">
             <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
 
            Kerala Best Properties
           </div>
-          <h2 ref={fadeRef} className="text-center fade-up-stagger text-2xl lg:text-[36px] font-medium mb-1 leading-tight  text-white">
+          <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight  text-white">
            Explore by Property Type
           </h2>
         </motion.div>
@@ -209,7 +209,7 @@ const Services = () => {
                     {/* Description */}
                     <div className="absolute bottom-[0px] z-1  lg:h-0 lg:opacity-0 translate-y-4 group-hover:opacity-100 group-hover:h-auto group-hover:translate-y-0 transition-all duration-500 overflow-hidden">
                       <h3 className="text-lg md:text-2xl leading-tight font-semibold text-white mt-2 ">{choose.title}</h3>
-                      <p className="text-sm text-[#D9D9D9] sm:text-md lg:mt-2 font-light max-w-[250px] mt-2">{choose.description}</p>
+                      <p className="text-xs text-[#D9D9D9] sm:text-md lg:mt-2 font-light max-w-[250px] mt-2">{choose.description}</p>
 
                       <AnimatedButton href="{choose.link}" label="Learn More" className="w-fit transparent-btn2 mt-3" />
                     </div>
