@@ -32,7 +32,7 @@ const Hero = () => {
                             </h1>
                             <p className="text-md lg:text-lg font-light max-w-[500px]">Experience luxury living with our premium properties. Enjoy special discounts and priority access for a limited time only.</p>
 
-                            <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-4">
+                            <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-2 lg:gap-4">
                                 
                                 <AnimatedButton  label="Buy a Property" className="w-fit" />
                                 <AnimatedButton  label="Sell a Property" className="w-fit transparent-btn transparent-btn4" />

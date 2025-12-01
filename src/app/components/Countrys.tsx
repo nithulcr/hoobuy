@@ -129,7 +129,7 @@ export default function DistrictsPage() {
                                     className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
                                 >
 
-                                    <span className="flex items-center justify-center bg-white rounded-full p-1">
+                                    <span className="flex items-center justify-center bg-white rounded-full p-1 ">
                                         <svg
                                             width="24"
                                             height="24"
