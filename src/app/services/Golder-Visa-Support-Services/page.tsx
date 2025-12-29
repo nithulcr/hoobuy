@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Golder Visa Support Services',
+    title: 'Service DealBuyHomes | Golder Visa Support Services',
     description: '',
     keywords: '',
 
@@ -54,13 +54,13 @@ export default function FamilyVisa() {
                    The UAE Golden Visa represents one of the most prestigious residency programs available today. Offering long-term residency to investors, professionals, exceptional talents, and high-achieving individuals, the Golden Visa opens doors to a stable future in one of the world’s most progressive nations. However, the application process involves detailed eligibility checks, specific documentation, strict attestation requirements, and continuous coordination with government entities.
                   </p>
                   <p className='font-light'>
-                    HooBuy provides a seamless Golden Visa documentation service that supports applicants at every stage. Our process begins with a personalised eligibility assessment where we analyse each client’s professional profile, qualifications, category criteria, salary structure, investment size, and academic achievements to determine the most suitable Golden Visa pathway. Once the eligibility is confirmed, we prepare a clear documentation roadmap.
+                    DealBuyHomes provides a seamless Golden Visa documentation service that supports applicants at every stage. Our process begins with a personalised eligibility assessment where we analyse each client’s professional profile, qualifications, category criteria, salary structure, investment size, and academic achievements to determine the most suitable Golden Visa pathway. Once the eligibility is confirmed, we prepare a clear documentation roadmap.
                   </p>
                   <p className='font-light'>
-                    Golden Visa documentation often requires attested educational certificates, salary statements, employment contracts, commercial licenses, bank statements, or specialised approval letters. HooBuy manages the attestation of every document—whether local or international—ensuring that all papers meet UAE residency standards. We also assist with translation, medical tests, Emirates ID procedures, visa stamping, and family inclusion, making the process smooth for the entire household.
+                    Golden Visa documentation often requires attested educational certificates, salary statements, employment contracts, commercial licenses, bank statements, or specialised approval letters. DealBuyHomes manages the attestation of every document—whether local or international—ensuring that all papers meet UAE residency standards. We also assist with translation, medical tests, Emirates ID procedures, visa stamping, and family inclusion, making the process smooth for the entire household.
                   </p>
                   <p className='font-light'>
-                    Our Golden Visa team provides detailed guidance, real-time updates, and continuous support until the residency permit is successfully issued. With HooBuy, clients experience a Golden Visa journey that is structured, guided, and free from uncertainty, ensuring that they settle into the UAE with confidence and long-term security.
+                    Our Golden Visa team provides detailed guidance, real-time updates, and continuous support until the residency permit is successfully issued. With DealBuyHomes, clients experience a Golden Visa journey that is structured, guided, and free from uncertainty, ensuring that they settle into the UAE with confidence and long-term security.
                   </p>
                  
                 </div>

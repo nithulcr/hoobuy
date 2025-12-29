@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Personal Document Attestation',
+    title: 'Service DealBuyHomes | Personal Document Attestation',
     description: '',
     keywords: '',
 
@@ -54,13 +54,13 @@ export default function Personal() {
 
                   </p>
                   <p className='font-light'>
-                   HooBuy handles personal documents with exceptional sensitivity and confidentiality. From birth certificates that confirm identity, to marriage certificates that establish family bonds, and from PCC that reflect an individual’s background history to medical or death certificates used for legal requirements—we ensure that each document is processed with the respect it deserves.
+                   DealBuyHomes handles personal documents with exceptional sensitivity and confidentiality. From birth certificates that confirm identity, to marriage certificates that establish family bonds, and from PCC that reflect an individual’s background history to medical or death certificates used for legal requirements—we ensure that each document is processed with the respect it deserves.
                   </p>
                   <p className='font-light'>
-                    Personal attestation follows its own unique pathway. It typically begins with local verification by the issuing authority, moves through notary and state home departments, and then proceeds to the foreign ministry. After these validations, the document is legalised by the UAE Embassy in the home country. The final step, which confirms its acceptance inside the UAE, is the MOFA attestation. At HooBuy, we oversee each step with precision, ensuring that no detail is overlooked and that the document is accepted without question by immigration departments, government offices, courts, and schools.
+                    Personal attestation follows its own unique pathway. It typically begins with local verification by the issuing authority, moves through notary and state home departments, and then proceeds to the foreign ministry. After these validations, the document is legalised by the UAE Embassy in the home country. The final step, which confirms its acceptance inside the UAE, is the MOFA attestation. At DealBuyHomes, we oversee each step with precision, ensuring that no detail is overlooked and that the document is accepted without question by immigration departments, government offices, courts, and schools.
                   </p>
                   <p className='font-light'>
-                    When a family decides to reunite in the UAE, or when a couple seeks to register their marriage in a foreign country, or when parents want to enrol their child in school abroad, documentation can become overwhelming. HooBuy removes this burden entirely and ensures that personal life events are supported with correct, timely, and hassle-free attestation.
+                    When a family decides to reunite in the UAE, or when a couple seeks to register their marriage in a foreign country, or when parents want to enrol their child in school abroad, documentation can become overwhelming. DealBuyHomes removes this burden entirely and ensures that personal life events are supported with correct, timely, and hassle-free attestation.
                   </p>
                 </div>
 

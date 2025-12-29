@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Business Setup Services',
+    title: 'Service DealBuyHomes | Business Setup Services',
     description: '',
     keywords: '',
 
@@ -51,16 +51,16 @@ export default function FamilyVisa() {
               <div>
                 <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
-                    Starting a business in the UAE is a remarkable opportunity. The country’s dynamic economy, strategic geographic location, tax benefits, and global connectivity make it one of the most attractive business destinations in the world. Yet, behind the promise of success lies a detailed path of approvals, legal clearances, documentation requirements, and licensing procedures that can overwhelm even the most experienced entrepreneurs. Understanding this complexity, HooBuy provides a complete business setup support system designed to make company formation effortless, transparent, and fast.
+                    Starting a business in the UAE is a remarkable opportunity. The country’s dynamic economy, strategic geographic location, tax benefits, and global connectivity make it one of the most attractive business destinations in the world. Yet, behind the promise of success lies a detailed path of approvals, legal clearances, documentation requirements, and licensing procedures that can overwhelm even the most experienced entrepreneurs. Understanding this complexity, DealBuyHomes provides a complete business setup support system designed to make company formation effortless, transparent, and fast.
                   </p>
                   <p className='font-light'>
-                    When a business idea takes shape, our role begins with guiding entrepreneurs through the UAE’s different company structures—mainland, freezone, and offshore. Each structure comes with its own advantages, regulations, cost considerations, and operational freedoms. HooBuy takes the time to understand your business model, commercial goals, and future expansion plans before recommending the most suitable formation route.
+                    When a business idea takes shape, our role begins with guiding entrepreneurs through the UAE’s different company structures—mainland, freezone, and offshore. Each structure comes with its own advantages, regulations, cost considerations, and operational freedoms. DealBuyHomes takes the time to understand your business model, commercial goals, and future expansion plans before recommending the most suitable formation route.
                   </p>
                   <p className='font-light'>
                     Once the decision is made, we manage the entire documentation cycle. This includes name reservation, activity approvals, drafting agreements, attesting corporate documents, securing initial permissions, preparing applications, coordinating with government departments, and ensuring compliance with legal frameworks. Every document—whether a passport copy, shareholder agreement, MOA, AOA, tenancy contract, bank reference, or corporate resolution—is meticulously checked and processed.
                   </p>
                   <p className='font-light'>
-                    HooBuy also assists with office space requirements, obtaining Ejari or lease contracts when needed, and managing investor visas and employee visas associated with the new company. Our role extends beyond the initial setup. We support renewals, modifications, license upgrades, and approvals required for business expansion. By handling the administrative foundation of the company, HooBuy allows entrepreneurs to focus on their 
+                    DealBuyHomes also assists with office space requirements, obtaining Ejari or lease contracts when needed, and managing investor visas and employee visas associated with the new company. Our role extends beyond the initial setup. We support renewals, modifications, license upgrades, and approvals required for business expansion. By handling the administrative foundation of the company, DealBuyHomes allows entrepreneurs to focus on their 
                   </p>
                  
                 </div>

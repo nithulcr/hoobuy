@@ -8,7 +8,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
   const metadata: Metadata = {
-    title: 'HooBuy',
+    title: 'DealBuyHomes',
     description: '',
     keywords: '',
   };

@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; hoobuy;",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; DealBuyHomes;",
   },
 };
 

@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Apostille Services',
+    title: 'Service DealBuyHomes | Apostille Services',
     description: '',
     keywords: '',
 
@@ -54,10 +54,10 @@ export default function UAEIssued() {
                    Documents issued within the UAE—whether educational, personal, legal, or commercial—often require attestation before they can be used outside the country. This process validates the authenticity of the document and ensures it is internationally recognised. UAE-issued certificates must typically pass through local ministries, courts, notary public offices, and embassy channels before they are accepted abroad.
                   </p>
                   <p className='font-light'>
-                  HooBuy assists clients by managing every step of this journey. Whether it is a degree issued by a UAE university, a birth or marriage certificate issued by Dubai Courts or Abu Dhabi Judicial Department, or commercial documents issued by the economic department, each document undergoes precise verification. Our team liaises with relevant ministries such as the Ministry of Education, the Ministry of Justice, and the MOFA UAE, and completes embassy legalisation for the destination country.
+                  DealBuyHomes assists clients by managing every step of this journey. Whether it is a degree issued by a UAE university, a birth or marriage certificate issued by Dubai Courts or Abu Dhabi Judicial Department, or commercial documents issued by the economic department, each document undergoes precise verification. Our team liaises with relevant ministries such as the Ministry of Education, the Ministry of Justice, and the MOFA UAE, and completes embassy legalisation for the destination country.
                   </p>
                   <p className='font-light'>
-                  For clients planning to migrate, pursue higher studies abroad, expand their business, or complete legal processes overseas, HooBuy ensures that every UAE-issued document is prepared with accuracy and certified according to international requirements.
+                  For clients planning to migrate, pursue higher studies abroad, expand their business, or complete legal processes overseas, DealBuyHomes ensures that every UAE-issued document is prepared with accuracy and certified according to international requirements.
                   </p>
                  
                 </div>

@@ -11,7 +11,7 @@ import Image from "next/image";
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const country = countriesData.find(c => c.slug === params.slug);
   return {
-    title: `HooBuy | ${country?.title || '{country.title}'}`,
+    title: `DealBuyHomes | ${country?.title || '{country.title}'}`,
     description: '',
     keywords: '',
   };

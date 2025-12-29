@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | True Copy Attestation',
+    title: 'Service DealBuyHomes | True Copy Attestation',
     description: '',
     keywords: '',
 
@@ -55,10 +55,10 @@ export default function TrueCopy() {
 
                   </p>
                   <p className='font-light'>
-                  HooBuy collaborates with authorised lawyers, notaries, and legal offices to produce certified true copies that are globally recognised. Once a true copy is verified, it can also be processed for further legalisation, including embassy and MOFA attestation. True copy certification is handled with the same reliability, security, and professionalism as all our other services, ensuring that your documents maintain their full legal value, even in photocopied form.
+                  DealBuyHomes collaborates with authorised lawyers, notaries, and legal offices to produce certified true copies that are globally recognised. Once a true copy is verified, it can also be processed for further legalisation, including embassy and MOFA attestation. True copy certification is handled with the same reliability, security, and professionalism as all our other services, ensuring that your documents maintain their full legal value, even in photocopied form.
                   </p>
                   <p className='font-light'>
-                    Whether the document is educational, personal, or commercial, HooBuy ensures that it undergoes the required apostille process efficiently. Clients trust us for our clarity, expertise, and ability to manage complex international requirements with ease.
+                    Whether the document is educational, personal, or commercial, DealBuyHomes ensures that it undergoes the required apostille process efficiently. Clients trust us for our clarity, expertise, and ability to manage complex international requirements with ease.
                   </p>
                  
                 </div>

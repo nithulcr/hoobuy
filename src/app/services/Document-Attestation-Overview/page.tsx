@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Document Attestation Overview',
+    title: 'Service DealBuyHomes | Document Attestation Overview',
     description: '',
     keywords: '',
 
@@ -54,11 +54,11 @@ export default function Document() {
 
                   </p>
                   <p className='font-light'>
-                    HooBuy ensures that your documents move through every stage smoothly. We begin by reviewing the document for formatting errors, incorrect details, or missing seals. Once verified, the document proceeds through various departments such as notary offices, state authorities, foreign ministries, and international embassies. The final stage often includes MOFA attestation, which makes the document valid inside the UAE.
+                    DealBuyHomes ensures that your documents move through every stage smoothly. We begin by reviewing the document for formatting errors, incorrect details, or missing seals. Once verified, the document proceeds through various departments such as notary offices, state authorities, foreign ministries, and international embassies. The final stage often includes MOFA attestation, which makes the document valid inside the UAE.
                   
                   </p>
                   <p className='font-light'>
-                    What makes HooBuy unique is our ability to handle variations in documents, country-specific rules, and embassy protocols with professionalism and clarity. Every document undergoes a custom-designed route depending on its type—educational, personal, or commercial—and the country where it will be used. With HooBuy, the entire attestation journey becomes predictable, transparent, and stress-free.
+                    What makes DealBuyHomes unique is our ability to handle variations in documents, country-specific rules, and embassy protocols with professionalism and clarity. Every document undergoes a custom-designed route depending on its type—educational, personal, or commercial—and the country where it will be used. With DealBuyHomes, the entire attestation journey becomes predictable, transparent, and stress-free.
                   </p>
                 </div>
 

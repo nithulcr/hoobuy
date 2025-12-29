@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Translation Services',
+    title: 'Service DealBuyHomes | Translation Services',
     description: '',
     keywords: '',
 
@@ -54,13 +54,13 @@ export default function TranslationServices() {
                    In a country as globally connected as the UAE, translation plays an important role in legal, corporate, and immigration processes. Documents issued in one language must often be translated into Arabic or English before being accepted by embassies, ministries, courts, and governmental institutions. This translation must be accurate, legally recognised, and certified, ensuring that it carries the same value as the original.
                   </p>
                   <p className='font-light'>
-                 HooBuy Attestation offers professional translation services that cover a wide range of languages. Our work is carried out by certified linguists who understand both the linguistic and legal significance of each document. Whether you are translating certificates, contracts, academic transcripts, commercial agreements, medical reports, or legal statements, every translation is produced with cultural accuracy, legal correctness, and complete adherence to government standards.
+                 DealBuyHomes Attestation offers professional translation services that cover a wide range of languages. Our work is carried out by certified linguists who understand both the linguistic and legal significance of each document. Whether you are translating certificates, contracts, academic transcripts, commercial agreements, medical reports, or legal statements, every translation is produced with cultural accuracy, legal correctness, and complete adherence to government standards.
                   </p>
                   <p className='font-light'>
-                   Translations are not merely word replacements—they must preserve the meaning, structure, and legal terminology of the original document. Our translators are trained to work with documents that require exact phrasing and terminology, ensuring the final translation is accepted without dispute. Once translated, documents can be forwarded for attestation or legalisation, making HooBuy a one-stop destination for both translation and attestation requirements.
+                   Translations are not merely word replacements—they must preserve the meaning, structure, and legal terminology of the original document. Our translators are trained to work with documents that require exact phrasing and terminology, ensuring the final translation is accepted without dispute. Once translated, documents can be forwarded for attestation or legalisation, making DealBuyHomes a one-stop destination for both translation and attestation requirements.
                   </p>
                   <p className='font-light'>
-                    At HooBuy, every translated document is reviewed, stamped, and prepared for submission to the relevant authority. This ensures smooth acceptance and eliminates the risk of rejection due to translation errors. Clients trust us for our deep linguistic expertise, fast turnaround, and consistent adherence to international translation standards.
+                    At DealBuyHomes, every translated document is reviewed, stamped, and prepared for submission to the relevant authority. This ensures smooth acceptance and eliminates the risk of rejection due to translation errors. Clients trust us for our deep linguistic expertise, fast turnaround, and consistent adherence to international translation standards.
                   </p>
                  
                 </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service HooBuy | Country Specific Attestation-Services',
+    title: 'Service DealBuyHomes | Country Specific Attestation-Services',
     description: '',
     keywords: '',
 
@@ -51,7 +51,7 @@ export default function CountrySpecific() {
               <div>
                 <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
-                    Every country follows its own unique procedures for document attestation, and understanding these differences is essential to completing the process correctly. HooBuy Attestation provides country-specific attestation support, carefully tailored to the rules and requirements of each issuing nation. Our global network enables us to manage documents from more than 50 countries, ensuring smooth movement through universities, ministries, embassies, and legal departments.
+                    Every country follows its own unique procedures for document attestation, and understanding these differences is essential to completing the process correctly. DealBuyHomes Attestation provides country-specific attestation support, carefully tailored to the rules and requirements of each issuing nation. Our global network enables us to manage documents from more than 50 countries, ensuring smooth movement through universities, ministries, embassies, and legal departments.
                   </p>
 
 
@@ -62,7 +62,7 @@ export default function CountrySpecific() {
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>India</h5>
-                      <p className='text-[var(--color)] font-light'>Indian documents follow a structured system that often includes university verification for educational certificates, state-level authentication for personal documents, and Chamber of Commerce approvals for commercial papers. Only after these steps can the documents proceed to the Ministry of External Affairs and the UAE Embassy. HooBuy coordinates every stage, ensuring timely and complete verification.</p>
+                      <p className='text-[var(--color)] font-light'>Indian documents follow a structured system that often includes university verification for educational certificates, state-level authentication for personal documents, and Chamber of Commerce approvals for commercial papers. Only after these steps can the documents proceed to the Ministry of External Affairs and the UAE Embassy. DealBuyHomes coordinates every stage, ensuring timely and complete verification.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
@@ -73,7 +73,7 @@ export default function CountrySpecific() {
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>Pakistan</h5>
-                      <p className='text-[var(--color)] font-light'>Pakistani documents typically pass through the Higher Education Commission (HEC), the Ministry of Foreign Affairs of Pakistan, and the UAE Embassy. Educational qualifications require verification of degrees directly from universities. HooBuy handles every requirement, ensuring that clients do not face delays due to incomplete steps.</p>
+                      <p className='text-[var(--color)] font-light'>Pakistani documents typically pass through the Higher Education Commission (HEC), the Ministry of Foreign Affairs of Pakistan, and the UAE Embassy. Educational qualifications require verification of degrees directly from universities. DealBuyHomes handles every requirement, ensuring that clients do not face delays due to incomplete steps.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
@@ -88,27 +88,27 @@ export default function CountrySpecific() {
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>United States of America</h5>
-                      <p className='text-[var(--color)] font-light'>The USA has one of the most detailed attestation routes due to its federal structure. Documents often require county-level certification, state validation, Department of State approval, and UAE Embassy legalisation. This multi-level journey can be overwhelming, but HooBuy manages every detail with clarity and expertise.</p>
+                      <p className='text-[var(--color)] font-light'>The USA has one of the most detailed attestation routes due to its federal structure. Documents often require county-level certification, state validation, Department of State approval, and UAE Embassy legalisation. This multi-level journey can be overwhelming, but DealBuyHomes manages every detail with clarity and expertise.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>Canada</h5>
-                      <p className='text-[var(--color)] font-light'>Canadian documents follow a similar structured process involving notarization, authentication through Global Affairs Canada, and UAE Embassy legalisation. HooBuy ensures that educational, personal, and corporate documents meet all the technical requirements set by Canadian authorities.</p>
+                      <p className='text-[var(--color)] font-light'>Canadian documents follow a similar structured process involving notarization, authentication through Global Affairs Canada, and UAE Embassy legalisation. DealBuyHomes ensures that educational, personal, and corporate documents meet all the technical requirements set by Canadian authorities.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>Europe</h5>
-                      <p className='text-[var(--color)] font-light'>Documents from European countries often undergo validation through their Ministry of Justice or Ministry of Foreign Affairs before being legalised by the UAE Embassy. Whether the document originates from Germany, France, Italy, the Netherlands, or Scandinavian countries, HooBuy ensures full compliance with European legalisation standards.</p>
+                      <p className='text-[var(--color)] font-light'>Documents from European countries often undergo validation through their Ministry of Justice or Ministry of Foreign Affairs before being legalised by the UAE Embassy. Whether the document originates from Germany, France, Italy, the Netherlands, or Scandinavian countries, DealBuyHomes ensures full compliance with European legalisation standards.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>Africa</h5>
-                      <p className='text-[var(--color)] font-light'>African countries follow diverse attestation processes depending on their local administrative structure. HooBuy manages documentation from Nigeria, Kenya, Ghana, South Africa, and others, ensuring every verification step is completed accurately, even when local procedures vary widely.</p>
+                      <p className='text-[var(--color)] font-light'>African countries follow diverse attestation processes depending on their local administrative structure. DealBuyHomes manages documentation from Nigeria, Kenya, Ghana, South Africa, and others, ensuring every verification step is completed accurately, even when local procedures vary widely.</p>
                     </div>
                     <div className='bg-white p-5 lg:p-7 rounded-2xl  text-sm '>
 
                       <h5 className='text-lg md:text-xl font-semibold mb-2'>GCC Countries</h5>
-                      <p className='text-[var(--color)] font-light'>Documents from Saudi Arabia, Bahrain, Kuwait, Qatar, and Oman follow their own government authentication pathways. HooBuy offers cross-border attestation for GCC nations, ensuring documents can be used either within the UAE or internationally.</p>
+                      <p className='text-[var(--color)] font-light'>Documents from Saudi Arabia, Bahrain, Kuwait, Qatar, and Oman follow their own government authentication pathways. DealBuyHomes offers cross-border attestation for GCC nations, ensuring documents can be used either within the UAE or internationally.</p>
                     </div>
 
 
@@ -118,7 +118,7 @@ export default function CountrySpecific() {
                 <div className='text-[var(--color)] flex flex-col gap-4'>
                   
                       <p className='font-light'>
-                        By tailoring our process to each country’s requirements, HooBuy provides unparalleled clarity and precision in global attestation.
+                        By tailoring our process to each country’s requirements, DealBuyHomes provides unparalleled clarity and precision in global attestation.
                       </p>
 
 
