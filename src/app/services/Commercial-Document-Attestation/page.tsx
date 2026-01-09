@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | Commercial Document Attestation',
+    title: 'Service HooBuy | Commercial Document Attestation',
     description: '',
     keywords: '',
 
@@ -53,13 +53,13 @@ export default function Commertial() {
                   <p className='font-light'>Commercial documents form the backbone of every business. They reflect a company’s legal identity, financial operations, ownership structure, agreements, and international dealings. When businesses expand into new markets, enter global partnerships, submit tenders, sign contracts, or engage in cross-border trade, commercial documents must be authenticated to maintain legal compliance and official recognition.
                   </p>
                   <p className='font-light'>
-                    DealBuyHomes Attestation provides comprehensive support for commercial document attestation, ensuring that companies operate with complete confidence in international markets. From incorporation papers to board resolutions, financial statements, agreements, invoices, and corporate powers of attorney, we handle every document with the precision required for global use.
+                    HooBuy Attestation provides comprehensive support for commercial document attestation, ensuring that companies operate with complete confidence in international markets. From incorporation papers to board resolutions, financial statements, agreements, invoices, and corporate powers of attorney, we handle every document with the precision required for global use.
                   </p>
                   <p className='font-light'>
                     Commercial attestation is more structured and often more sensitive due to the impact it has on legal and financial operations. It usually involves validation by chambers of commerce, ministries of economy, foreign ministries, and embassies. Each stage verifies a different dimension of the document—its purpose, its issuing authority, its signatures, and its legal binding nature. After embassy legalisation, the document undergoes final MOFA approval in the UAE, enabling it to be used within the legal, corporate, and banking systems.
                   </p>
                   <p className='font-light'>
-                    Businesses rely on DealBuyHomes because we offer unmatched clarity, quick processing, and strict compliance. Whether a startup, SME, or multinational corporation, our commercial attestation solutions ensure that every document is validated according to the highest international standards. With DealBuyHomes, businesses save time, avoid legal complications, prevent compliance issues, and maintain smooth operations across borders.
+                    Businesses rely on HooBuy because we offer unmatched clarity, quick processing, and strict compliance. Whether a startup, SME, or multinational corporation, our commercial attestation solutions ensure that every document is validated according to the highest international standards. With HooBuy, businesses save time, avoid legal complications, prevent compliance issues, and maintain smooth operations across borders.
                   </p>
                 </div>
 

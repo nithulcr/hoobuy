@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | Apostille Services',
+    title: 'Service HooBuy | Apostille Services',
     description: '',
     keywords: '',
 
@@ -55,10 +55,10 @@ export default function Apostille() {
 
                   </p>
                   <p className='font-light'>
-                  DealBuyHomes offers complete apostille services for individuals and businesses who need to validate their documents for use in countries that recognise the Hague Convention. The process is straightforward but must be executed with accuracy to avoid rejection. Our experts ensure that each document meets all apostille requirements, including correct formatting, verification, and supporting documentation.
+                  HooBuy offers complete apostille services for individuals and businesses who need to validate their documents for use in countries that recognise the Hague Convention. The process is straightforward but must be executed with accuracy to avoid rejection. Our experts ensure that each document meets all apostille requirements, including correct formatting, verification, and supporting documentation.
                   </p>
                   <p className='font-light'>
-                    Whether the document is educational, personal, or commercial, DealBuyHomes ensures that it undergoes the required apostille process efficiently. Clients trust us for our clarity, expertise, and ability to manage complex international requirements with ease.
+                    Whether the document is educational, personal, or commercial, HooBuy ensures that it undergoes the required apostille process efficiently. Clients trust us for our clarity, expertise, and ability to manage complex international requirements with ease.
                   </p>
                  
                 </div>

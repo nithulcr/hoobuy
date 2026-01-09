@@ -6,8 +6,8 @@ import { Toaster } from 'react-hot-toast';
 import SmoothScrollWrapper from "./SmoothScrollWrapper";
 
 export const metadata: Metadata = {
-  title: 'DealBuyHomes',
-  description: 'DealBuyHomes',
+  title: 'HooBuy',
+  description: 'HooBuy',
   keywords: '',
   icons: {
     icon: '/favicon.png',

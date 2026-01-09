@@ -5,7 +5,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | Family Visa Documentation Support',
+    title: 'Service HooBuy | Family Visa Documentation Support',
     description: '',
     keywords: '',
 
@@ -53,10 +53,10 @@ export default function FamilyVisa() {
                   Family visa documentation is one of the most sensitive areas of attestation because it directly affects the ability of families to reunite and live together. Whether someone is sponsoring their spouse, children, parents, or newborns, each visa category requires a set of documents that must be properly attested and translated before submission. A single missing stamp or incomplete verification can result in delays that affect families emotionally and financially.
                   </p>
                   <p className='font-light'>
-                  DealBuyHomes supports families by ensuring that every document—marriage certificates, birth certificates, tenancy contracts, salary statements, bank statements, and identification documents—is carefully reviewed and prepared. We guide clients through each requirement, explaining the process in simple terms while taking full responsibility for the attestation, legalisation, and translation.
+                  HooBuy supports families by ensuring that every document—marriage certificates, birth certificates, tenancy contracts, salary statements, bank statements, and identification documents—is carefully reviewed and prepared. We guide clients through each requirement, explaining the process in simple terms while taking full responsibility for the attestation, legalisation, and translation.
                   </p>
                   <p className='font-light'>
-                  For new residents, long-term expatriates, and Golden Visa holders, our service ensures that family reunification happens smoothly and without complications. DealBuyHomes works with government portals, immigration systems, and ministry channels to provide a complete documentation solution that supports the dream of living together in the UAE.
+                  For new residents, long-term expatriates, and Golden Visa holders, our service ensures that family reunification happens smoothly and without complications. HooBuy works with government portals, immigration systems, and ministry channels to provide a complete documentation solution that supports the dream of living together in the UAE.
                   </p>
                  
                 </div>

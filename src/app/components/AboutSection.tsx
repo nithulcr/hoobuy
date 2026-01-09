@@ -15,7 +15,7 @@ const services = [
     title: "About Us",
     subtitle: "Built with modern technology",
     description:
-      "DealBuyHomes Real Estate is a Kerala-based property platform dedicated to making buying and selling homes simple, transparent, and stress‑free. With deep local market knowledge and a growing network of trusted partners, DealBuyHomes connects buyers, sellers, and investors with the right opportunities at the right time. The team supports clients through each step of the journey – property discovery, site visits, negotiations, documentation, and closing – with honest guidance and timely communication.",
+      "HooBuy Real Estate is a Kerala-based property platform dedicated to making buying and selling homes simple, transparent, and stress‑free. With deep local market knowledge and a growing network of trusted partners, HooBuy connects buyers, sellers, and investors with the right opportunities at the right time. The team supports clients through each step of the journey – property discovery, site visits, negotiations, documentation, and closing – with honest guidance and timely communication.",
     videoSrc: "./video.mp4",
     bgClassLeft: "eight",
     bgClassRight: "seven",

@@ -179,7 +179,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col">
                   <span className="opacity-60 text-[12px] font-light">Work with us</span>
-                  <a href="mailto:Info@safeattestuae.com"  className="">Info@DealBuyHomes.com</a>
+                  <a href="mailto:Info@safeattestuae.com"  className="">Info@HooBuy.com</a>
                 </div>
               </li>
               <li className="flex gap-4 text-[15px]">
@@ -208,7 +208,7 @@ export default function Footer() {
       
     </div>
     <div className="px-6">
-        <div className="py-5 text-sm  text-center">DealBuyHomes - Copyright 2025. All rights reserved.</div>
+        <div className="py-5 text-sm  text-center">HooBuy - Copyright 2025. All rights reserved.</div>
 
       </div>
     </footer>

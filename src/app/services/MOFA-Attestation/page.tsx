@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | MOFA Attestation',
+    title: 'Service HooBuy | MOFA Attestation',
     description: '',
     keywords: '',
 
@@ -54,10 +54,10 @@ export default function Commertial() {
                     MOFA attestation is the final and most essential stage for any document intended for use within the UAE. Regardless of how many authorities have previously verified a document—whether in the issuing country or at its embassy—the UAE government requires every foreign document to be authenticated by the UAE Ministry of Foreign Affairs before it is considered legally valid.
                   </p>
                   <p className='font-light'>
-                    At DealBuyHomes, we handle MOFA attestation as a seamless extension of the entire legalisation journey. We manage the submission, verification, approval, and final collection, ensuring that the process is as quick and stress-free as possible. Since MOFA attestation requires precise documentation and fee payments, our team ensures everything is prepared in advance so there are no delays.
+                    At HooBuy, we handle MOFA attestation as a seamless extension of the entire legalisation journey. We manage the submission, verification, approval, and final collection, ensuring that the process is as quick and stress-free as possible. Since MOFA attestation requires precise documentation and fee payments, our team ensures everything is prepared in advance so there are no delays.
                   </p>
                   <p className='font-light'>
-                    Whether it is a degree certificate for employment, a marriage certificate for family sponsorship, a commercial license for business setup, or a medical certificate for legal use, DealBuyHomes ensures every document receives the official recognition it needs to be used confidently in the UAE.
+                    Whether it is a degree certificate for employment, a marriage certificate for family sponsorship, a commercial license for business setup, or a medical certificate for legal use, HooBuy ensures every document receives the official recognition it needs to be used confidently in the UAE.
                   </p>
                  
                 </div>

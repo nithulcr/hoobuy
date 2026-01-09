@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | Corporative Services',
+    title: 'Service HooBuy | Corporative Services',
     description: '',
     keywords: '',
 
@@ -51,7 +51,7 @@ export default function Educational() {
               <div>
                 <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
-Educational documents are the foundation of your professional identity. They speak on your behalf when you apply for a job abroad, seek admission in international universities, or pursue specialised licensing programs. Without proper attestation, even the most prestigious degrees may lose their value in the eyes of foreign authorities. Recognising this, DealBuyHomes Attestation treats every educational document with meticulous care, ensuring that it meets all global standards of verification.
+Educational documents are the foundation of your professional identity. They speak on your behalf when you apply for a job abroad, seek admission in international universities, or pursue specialised licensing programs. Without proper attestation, even the most prestigious degrees may lose their value in the eyes of foreign authorities. Recognising this, HooBuy Attestation treats every educational document with meticulous care, ensuring that it meets all global standards of verification.
                   </p>
                   <p className='font-light'>
                     
@@ -61,7 +61,7 @@ Educational documents are the foundation of your professional identity. They spe
                    Once the document is deemed ready, it moves through various stages involving university verification, state-level authentication, and foreign ministry approval, eventually reaching the UAE Embassy in the issuing country. Each stage adds an additional layer of authenticity to the document. The final approval is completed with UAE MOFA attestation, ensuring the certificate is valid and legally acceptable within the UAE.
                   </p>
                   <p className='font-light'>
-                   For students, job seekers, healthcare professionals, engineers, educators, IT specialists, and skilled workers, DealBuyHomes ensures that the attestation process becomes an effortless experience. Instead of navigating government protocols, our clients simply hand over their documents and receive them back fully attested, ready to support their dreams and ambitions abroad.
+                   For students, job seekers, healthcare professionals, engineers, educators, IT specialists, and skilled workers, HooBuy ensures that the attestation process becomes an effortless experience. Instead of navigating government protocols, our clients simply hand over their documents and receive them back fully attested, ready to support their dreams and ambitions abroad.
                   </p>
                 </div>
 

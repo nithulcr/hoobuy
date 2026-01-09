@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function generateMetadata() {
 
   const metadata: Metadata = {
-    title: 'Service DealBuyHomes | Pro Services',
+    title: 'Service HooBuy | Pro Services',
     description: '',
     keywords: '',
 
@@ -51,15 +51,15 @@ export default function ProServices() {
               <div>
                 <div className='text-[var(--color)] flex flex-col gap-4'>
                   <p className='font-light'>
-                    Public Relations Officer (PRO) services are essential to navigating the UAE’s government processes. For many individuals and companies, dealing with immigration departments, labour offices, licensing authorities, and other government systems can feel confusing and time-consuming. DealBuyHomes provides a complete PRO service framework that removes this burden entirely, ensuring that every government-related task is completed smoothly and professionally.
+                    Public Relations Officer (PRO) services are essential to navigating the UAE’s government processes. For many individuals and companies, dealing with immigration departments, labour offices, licensing authorities, and other government systems can feel confusing and time-consuming. HooBuy provides a complete PRO service framework that removes this burden entirely, ensuring that every government-related task is completed smoothly and professionally.
                   </p>
                   <p className='font-light'>
-                  For individuals, PRO support begins the moment they arrive in the UAE. From visa stamping and medical tests to Emirates ID biometric procedures, residency renewals, family visa applications, and visa cancellations, we manage each requirement with a streamlined approach. Clients no longer need to understand government portals, book appointments, or physically visit service centres—DealBuyHomes takes responsibility for the entire journey.                  </p>
+                  For individuals, PRO support begins the moment they arrive in the UAE. From visa stamping and medical tests to Emirates ID biometric procedures, residency renewals, family visa applications, and visa cancellations, we manage each requirement with a streamlined approach. Clients no longer need to understand government portals, book appointments, or physically visit service centres—HooBuy takes responsibility for the entire journey.                  </p>
                   <p className='font-light'>
-                    Businesses benefit even more from PRO services. UAE companies are required to maintain accurate compliance records with immigration, labour, and licensing authorities. Failure to do so can result in penalties, delays, or legal complications. DealBuyHomes ensures that every requirement—from employee visa processing and labour approvals to establishment card renewals, company license updates, and immigration card management—is executed without error. By taking over these responsibilities, we free companies from administrative pressure and enable them to focus on productivity and growth.
+                    Businesses benefit even more from PRO services. UAE companies are required to maintain accurate compliance records with immigration, labour, and licensing authorities. Failure to do so can result in penalties, delays, or legal complications. HooBuy ensures that every requirement—from employee visa processing and labour approvals to establishment card renewals, company license updates, and immigration card management—is executed without error. By taking over these responsibilities, we free companies from administrative pressure and enable them to focus on productivity and growth.
                   </p>
                    <p className='font-light'>
-                    DealBuyHomes has built a trusted name in PRO solutions by combining precision, speed, and reliability. We monitor deadlines, prepare documentation in advance, schedule government appointments, and track every application until completion. For both individuals and 
+                    HooBuy has built a trusted name in PRO solutions by combining precision, speed, and reliability. We monitor deadlines, prepare documentation in advance, schedule government appointments, and track every application until completion. For both individuals and 
                    </p>
                  
                 </div>

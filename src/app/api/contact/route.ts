@@ -25,10 +25,10 @@ export async function POST(req: NextRequest) {
 
   try {
     const info = await transporter.sendMail({
-      from: `DealBuyHomesuae Website`,
+      from: `HooBuyuae Website`,
       to: process.env.RECIPIENT_EMAIL,
       replyTo: email,
-      subject: 'New Contact Message from DealBuyHomes Website',
+      subject: 'New Contact Message from HooBuy Website',
       html: `
         <h2>New Message Received</h2>
         <p><strong>Name:</strong> ${name}</p>

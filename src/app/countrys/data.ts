@@ -11,10 +11,10 @@ export const countriesData = [
        France certificate attestation is the process of validating French documents so they are officially recognised in the UAE. Attestation is mandatory for employment, higher studies, marriage applications, or business purposes in the UAE.
       </p>
       <p>
-       DealBuyHomes Attestation provides efficient and affordable French certificate attestation, completing every step from France all the way to UAE MOFA.
+       HooBuy Attestation provides efficient and affordable French certificate attestation, completing every step from France all the way to UAE MOFA.
       </p>
       <p>
-        For clients planning to migrate, pursue higher studies abroad, expand their business, or complete legal processes overseas, DealBuyHomes ensures that every UAE-issued document is prepared with accuracy and certified according to international requirements.
+        For clients planning to migrate, pursue higher studies abroad, expand their business, or complete legal processes overseas, HooBuy ensures that every UAE-issued document is prepared with accuracy and certified according to international requirements.
       </p>
     `,
     process: {
@@ -58,7 +58,7 @@ export const countriesData = [
         Australian certificate attestation ensures that documents issued in Australia are authenticated and recognized by UAE authorities. These include educational, personal, or business certificates needed for employment and visa processing in the UAE.
       </p>
       <p>
-        DealBuyHomes Attestation provides fast, budget-friendly Australian attestation services, covering all required government departments.
+        HooBuy Attestation provides fast, budget-friendly Australian attestation services, covering all required government departments.
       </p>
     `,
     process: {
@@ -101,7 +101,7 @@ export const countriesData = [
         Lebanon certificate attestation verifies Lebanese documents for official acceptance in the UAE. This includes degrees, birth/marriage certificates, and commercial records.
       </p>
       <p>
-        DealBuyHomes Attestation ensures an easy, cost-effective attestation process from Lebanon to the UAE, completing every required ministry and embassy stage.
+        HooBuy Attestation ensures an easy, cost-effective attestation process from Lebanon to the UAE, completing every required ministry and embassy stage.
       </p>
     `,
     process: {
@@ -145,7 +145,7 @@ export const countriesData = [
         BVI certificate attestation is the process of verifying the authenticity of personal and commercial documents issued in the British Virgin Islands for use in the UAE. This legalisation is essential for business setup, banking, corporate documentation, and residency procedures in the UAE.
       </p>
       <p>
-        The attestation process requires multiple stages, and DealBuyHomes Attestation provides fast, cost-effective, and efficient BVI attestation services in Dubai, UAE. Most companies registered in the BVI must present attested documents—such as Certificates of Incorporation, Memos, and Powers of Attorney—to UAE authorities, making proper legalisation compulsory.
+        The attestation process requires multiple stages, and HooBuy Attestation provides fast, cost-effective, and efficient BVI attestation services in Dubai, UAE. Most companies registered in the BVI must present attested documents—such as Certificates of Incorporation, Memos, and Powers of Attorney—to UAE authorities, making proper legalisation compulsory.
       </p>
     `,
     process: {
@@ -191,7 +191,7 @@ export const countriesData = [
         Russian certificate attestation is required to validate educational, personal, and commercial documents issued in Russia before they can be officially used in the UAE. This includes verification by Russian authorities followed by UAE embassy and MOFA procedures.
       </p>
       <p>
-        The process can be complex due to translation requirements, and DealBuyHomes Attestation ensures efficient and cost-effective Russian document attestation in Dubai. Whether issued by Russian universities, government departments, or legal offices, every document must undergo proper legalization.
+        The process can be complex due to translation requirements, and HooBuy Attestation ensures efficient and cost-effective Russian document attestation in Dubai. Whether issued by Russian universities, government departments, or legal offices, every document must undergo proper legalization.
       </p>
     `,
     process: {
@@ -235,7 +235,7 @@ export const countriesData = [
         Spanish certificate attestation is the process of authenticating Spain-issued documents for official use in the UAE. This includes educational degrees, birth/marriage certificates, and corporate documents.
       </p>
       <p>
-        The attestation process involves several departments in Spain, and DealBuyHomes Attestation guarantees efficient and affordable processing until final MOFA stamping in the UAE.
+        The attestation process involves several departments in Spain, and HooBuy Attestation guarantees efficient and affordable processing until final MOFA stamping in the UAE.
       </p>
     `,
     process: {
@@ -279,7 +279,7 @@ export const countriesData = [
         Portugal certificate attestation is required to authenticate documents issued in Portugal for use in the UAE. Whether academic, personal, or corporate, these certificates must be legalised by Portuguese authorities and the UAE government.
       </p>
       <p>
-        DealBuyHomes Attestation provides quick and cost-efficient Portugal attestation services in Dubai, ensuring every stage is completed accurately.
+        HooBuy Attestation provides quick and cost-efficient Portugal attestation services in Dubai, ensuring every stage is completed accurately.
       </p>
     `,
     process: {
@@ -323,7 +323,7 @@ export const countriesData = [
         UK certificate attestation is the process of verifying the authenticity of UK-issued educational and non-educational certificates for use in the UAE. This is a mandatory legalization procedure required by both UK authorities and UAE authorities for employment, visa processing, higher education, and professional licensing in the UAE.
       </p>
       <p>
-        The attestation process can be time-consuming, and DealBuyHomes Attestation ensures the most cost-effective and efficient UK certificate attestation services in Dubai, UAE. Whether your documents are issued by UK universities, colleges, schools, or government departments, every certificate must be authenticated by UK authorities before UAE legalization.
+        The attestation process can be time-consuming, and HooBuy Attestation ensures the most cost-effective and efficient UK certificate attestation services in Dubai, UAE. Whether your documents are issued by UK universities, colleges, schools, or government departments, every certificate must be authenticated by UK authorities before UAE legalization.
       </p>
     `,
     process: {
@@ -369,7 +369,7 @@ export const countriesData = [
         USA certificate attestation is required to prove the authenticity of American educational, personal, and commercial certificates when they are being used in the UAE. Every document issued in the USA must be legally verified by US authorities and then by the UAE government before being accepted for visa or professional purposes.
       </p>
       <p>
-        DealBuyHomes Attestation provides cost-effective and efficient USA certificate attestation in Dubai, ensuring timely processing through all federal, state, and embassy levels. US universities, schools, and government-issued certificates must be properly legalized for UAE use.
+        HooBuy Attestation provides cost-effective and efficient USA certificate attestation in Dubai, ensuring timely processing through all federal, state, and embassy levels. US universities, schools, and government-issued certificates must be properly legalized for UAE use.
       </p>
     `,
     process: {
@@ -414,7 +414,7 @@ export const countriesData = [
         Canadian certificate attestation validates the authenticity of documents issued in Canada for official use in the UAE. Whether educational, personal, or commercial, all Canadian documents must be authenticated by Canadian authorities and legalized by UAE authorities.
       </p>
       <p>
-        DealBuyHomes Attestation offers the most reliable and affordable Canadian certificate attestation services in the UAE. Since Canadian documents are issued through provincial systems, each certificate must undergo the required provincial and federal authentication stages before UAE legalization.
+        HooBuy Attestation offers the most reliable and affordable Canadian certificate attestation services in the UAE. Since Canadian documents are issued through provincial systems, each certificate must undergo the required provincial and federal authentication stages before UAE legalization.
       </p>
     `,
     process: {
@@ -457,7 +457,7 @@ export const countriesData = [
         Italian certificate attestation is mandatory for validating documents issued in Italy for use in the UAE. Educational, personal, and commercial certificates must go through Italian government authentication and UAE legalization before being accepted for visas, jobs, or academic purposes.
       </p>
       <p>
-        DealBuyHomes Attestation ensures fast and cost-effective Italian certificate attestation, managing all steps including notary, MAECI, and UAE Embassy processing.
+        HooBuy Attestation ensures fast and cost-effective Italian certificate attestation, managing all steps including notary, MAECI, and UAE Embassy processing.
       </p>
     `,
     process: {
@@ -501,7 +501,7 @@ export const countriesData = [
         Indian certificate attestation is the process of verifying the authenticity of Indian-issued educational or non-educational documents for official use in the UAE. The process involves authentication from Indian authorities followed by UAE government verification.
       </p>
       <p>
-        DealBuyHomes Attestation ensures a smooth, cost-effective, and timely attestation process. Universities operating outside India but registered in India—such as Amity University, BITS Pilani, Anna University, Bangalore University, and others—also require Indian attestation before UAE approval.
+        HooBuy Attestation ensures a smooth, cost-effective, and timely attestation process. Universities operating outside India but registered in India—such as Amity University, BITS Pilani, Anna University, Bangalore University, and others—also require Indian attestation before UAE approval.
       </p>
     `,
     process: {
@@ -544,7 +544,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Sri Lanka certificate attested for UAE.',
     content: `
     <p>Sri Lanka certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. National authorities must authenticate documents and later legalise by the UAE government bodies.</p>
-    <p>The attestation procedure can be time-consuming, but DealBuyHomes Attestation offers efficient and cost-effective processing for all Sri Lankan certificates.</p>
+    <p>The attestation procedure can be time-consuming, but HooBuy Attestation offers efficient and cost-effective processing for all Sri Lankan certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -583,7 +583,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your UAE certificate attested for UAE.',
     content: `
     <p>UAE certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. National authorities must authenticate documents and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can be time-consuming, but DealBuyHomes Attestation offers efficient and cost-effective processing for all UAE certificates.</p>
+    <p>The attestation procedure can be time-consuming, but HooBuy Attestation offers efficient and cost-effective processing for all UAE certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -622,7 +622,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Germany certificate attested for UAE.',
     content: `
     <p>Germany certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Germany certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Germany certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -661,7 +661,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Philippines certificate attested for UAE.',
     content: `
     <p>Philippines certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Philippines certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Philippines certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -700,7 +700,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Pakistan certificate attested for UAE.',
     content: `
     <p>Pakistan certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Pakistan certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Pakistan certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -739,7 +739,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Bangladesh certificate attested for UAE.',
     content: `
     <p>Bangladesh certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Bangladesh certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Bangladesh certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -778,7 +778,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Nepal certificate attested for UAE.',
     content: `
     <p>Nepal certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Nepal certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Nepal certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -817,7 +817,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Afghanistan certificate attested for UAE.',
     content: `
     <p>Afghanistan certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Afghanistan certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Afghanistan certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -856,7 +856,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your South Africa certificate attested for UAE.',
     content: `
     <p>South Africa certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all South Africa certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all South Africa certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -895,7 +895,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Kenya certificate attested for UAE.',
     content: `
     <p>Kenya certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. National authorities must authenticate documents and later legalised by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Kenyan certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Kenyan certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -934,7 +934,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Nigeria certificate attested for UAE.',
     content: `
     <p>Nigeria certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. National authorities must authenticate documents and later legalise by UAE government bodies.</p>
-    <p>The attestation procedure can be time-consuming, but DealBuyHomes Attestation offers efficient and cost-effective processing for all Nigerian certificates.</p>
+    <p>The attestation procedure can be time-consuming, but HooBuy Attestation offers efficient and cost-effective processing for all Nigerian certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -973,7 +973,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Egypt certificate attested for UAE.',
     content: `
     <p>Egypt certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Egypt certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Egypt certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -1012,7 +1012,7 @@ export const countriesData = [
     contactTitle: 'Contact us to get your Jordan certificate attested for UAE.',
     content: `
     <p>Jordan certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Jordan certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Jordan certificates.</p>
   `,
     process: {
       title: 'Process of Certificate Attestation',
@@ -1051,7 +1051,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Turkey certificate attested for UAE.',
   content: `
     <p>Turkey certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Turkey certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Turkey certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1090,7 +1090,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Qatar certificate attested for UAE.',
   content: `
     <p>Qatar certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Qatar certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Qatar certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1129,7 +1129,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Oman certificate attested for UAE.',
   content: `
     <p>Oman certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Oman certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Oman certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1168,7 +1168,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Bahrain certificate attested for UAE.',
   content: `
     <p>Bahrain certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Bahrain certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Bahrain certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1207,7 +1207,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Kuwait certificate attested for UAE.',
   content: `
     <p>Kuwait certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Kuwait certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Kuwait certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1246,7 +1246,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your China certificate attested for UAE.',
   content: `
     <p>China certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all China certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all China certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1285,7 +1285,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Hong Kong certificate attested for UAE.',
   content: `
     <p>Hong Kong certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Hong Kong certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Hong Kong certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1324,7 +1324,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Malaysia certificate attested for UAE.',
   content: `
     <p>Malaysia certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Malaysia certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Malaysia certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1363,7 +1363,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Singapore certificate attested for UAE.',
   content: `
     <p>Singapore certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Singapore certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Singapore certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1402,7 +1402,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Indonesia certificate attested for UAE.',
   content: `
     <p>Indonesia certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Indonesia certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Indonesia certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1441,7 +1441,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Thailand certificate attested for UAE.',
   content: `
     <p>Thailand certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Thailand certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Thailand certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1480,7 +1480,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Japan certificate attested for UAE.',
   content: `
     <p>Japan certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Japan certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Japan certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1519,7 +1519,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your South Korea certificate attested for UAE.',
   content: `
     <p>South Korea certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all South Korea certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all South Korea certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1558,7 +1558,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Netherlands certificate attested for UAE.',
   content: `
     <p>Netherlands certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Netherlands certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Netherlands certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1597,7 +1597,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Belgium certificate attested for UAE.',
   content: `
     <p>Belgium certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Belgium certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Belgium certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1636,7 +1636,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Switzerland certificate attested for UAE.',
   content: `
     <p>Switzerland certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Switzerland certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Switzerland certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1675,7 +1675,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Sweden certificate attested for UAE.',
   content: `
     <p>Sweden certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Sweden certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Sweden certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1714,7 +1714,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Denmark certificate attested for UAE.',
   content: `
     <p>Denmark certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Denmark certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Denmark certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1753,7 +1753,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Austria certificate attested for UAE.',
   content: `
     <p>Austria certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Austria certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Austria certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1792,7 +1792,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Norway certificate attested for UAE.',
   content: `
     <p>Norway certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Norway certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Norway certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1831,7 +1831,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Poland certificate attested for UAE.',
   content: `
     <p>Poland certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Poland certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Poland certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1870,7 +1870,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Romania certificate attested for UAE.',
   content: `
     <p>Romania certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Romania certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Romania certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1909,7 +1909,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Greece certificate attested for UAE.',
   content: `
     <p>Greece certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Greece certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Greece certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1948,7 +1948,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Cyprus certificate attested for UAE.',
   content: `
     <p>Cyprus certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Cyprus certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Cyprus certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -1987,7 +1987,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Brazil certificate attested for UAE.',
   content: `
     <p>Brazil certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Brazil certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Brazil certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',
@@ -2027,7 +2027,7 @@ export const countriesData = [
   contactTitle: 'Contact us to get your Mexico certificate attested for UAE.',
   content: `
     <p>Mexico certificate attestation verifies the authenticity of educational, personal, and commercial documents for official use in the UAE. Documents must be authenticated by national authorities and later legalized by UAE government bodies.</p>
-    <p>The attestation procedure can take time, and DealBuyHomes Attestation provides efficient, cost-effective processing for all Mexico certificates.</p>
+    <p>The attestation procedure can take time, and HooBuy Attestation provides efficient, cost-effective processing for all Mexico certificates.</p>
   `,
   process: {
     title: 'Process of Certificate Attestation',

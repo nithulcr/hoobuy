@@ -80,7 +80,7 @@ export default function Home() {
                   <h3 className="text-[18px] font-semibold">Our Mission</h3>
                 </div>
                 <p className="text-sm  leading-snug text-1 mt-4 font-light">
-                 Our mission is to transform the attestation experience into a seamless, reliable, and stress-free journey. We aim to simplify the most complex processes and ensure that every document is handled with precision and care. Through professional expertise, clear communication, and strict quality control, we help people access global opportunities without the barriers that typically slow them down. DealBuyHomes exists to make international documentation simple, secure, and accessible for everyone.
+                 Our mission is to transform the attestation experience into a seamless, reliable, and stress-free journey. We aim to simplify the most complex processes and ensure that every document is handled with precision and care. Through professional expertise, clear communication, and strict quality control, we help people access global opportunities without the barriers that typically slow them down. HooBuy exists to make international documentation simple, secure, and accessible for everyone.
                 </p>
 
               </div>
@@ -95,7 +95,7 @@ export default function Home() {
                   <h3 className="text-[18px] font-semibold">Our Vision</h3>
                 </div>
                 <p className="text-sm  leading-snug text-1 mt-4 font-light">
-                 We envision DealBuyHomes as the leading attestation company in the UAE and one of the most trusted names in global documentation. A future where every individual, business, and institution can rely on our services with absolute confidence. We aim to expand our capabilities across more countries, integrate advanced technologies, enhance customer experience, and build long-lasting relationships through results that speak for themselves. Our vision is to set the highest standard of service excellence in the global attestation industry.
+                 We envision HooBuy as the leading attestation company in the UAE and one of the most trusted names in global documentation. A future where every individual, business, and institution can rely on our services with absolute confidence. We aim to expand our capabilities across more countries, integrate advanced technologies, enhance customer experience, and build long-lasting relationships through results that speak for themselves. Our vision is to set the highest standard of service excellence in the global attestation industry.
                 </p>
 
               </div>
