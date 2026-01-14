@@ -18,11 +18,10 @@ interface PageProps {
 
 export default function PropertyPage({ params }: PageProps) {
     const { slug } = use(params);
-
+    const [activeImage, setActiveImage] = useState(0); // This must be called unconditionally
     const property = properties.find((p) => p.slug === slug);
-    if (!property) return notFound();
 
-    const [activeImage, setActiveImage] = useState(0);
+    if (!property) return notFound();
     const totalImages = property.images.length;
 
     const goPrev = () => {
