@@ -14,7 +14,7 @@ export default function Property() {
     return (
         <section
             id="property"
-            className="py-14 lg:py-24 relative bg-white rounded-3xl"
+            className="py-14 lg:py-20 relative"
         >
             <div className="max-w-[1400px] mx-auto px-6">
                 <motion.div
@@ -27,7 +27,7 @@ export default function Property() {
                     {properties.map((property) => (
                         <div
                             key={property.id}
-                            className="group bg-[var(--background2)] p-2 border border-[var(--siteColor3)] rounded-2xl relative transition-all duration-500 relative top-0 hover:top-[-5px]"
+                            className="group bg-white p-2 border border-[var(--siteColor3)] rounded-2xl relative transition-all duration-500 relative top-0 hover:top-[-5px]"
                         >
                             <span className="block relative">
                                 <Image
