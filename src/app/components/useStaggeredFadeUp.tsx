@@ -52,7 +52,7 @@ element.style.overflow = "hidden";
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 90%",
+        start: "top 95%",
       },
     });
 

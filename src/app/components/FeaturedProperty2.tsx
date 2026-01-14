@@ -8,7 +8,7 @@ import AnimatedButton from "./AnimatedButton";
 
 
 
-const property2En = [
+const Property3En = [
     {
         id: '01',
               icon: "/property1.jpg",
@@ -26,7 +26,7 @@ const property2En = [
     },
     {
         id: '02',
-               icon: "/property2.jpg",
+               icon: "/Property3.jpg",
 
         title: "Land Solded",
         land: "land",
@@ -66,14 +66,14 @@ const property2En = [
 
 ];
 
-export default function Property2() {
-    const property2 = property2En;
+export default function Property3() {
+    const Property3 = Property3En;
     const fadeRef = useRef<HTMLHeadingElement>(null);
     useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
 
 
     return (
-        <section id="property2" className="py-14 lg:py-24   relative bg-white rounded-3xl">
+        <section id="Property3" className="py-14 lg:py-24   relative bg-white rounded-3xl">
             <div className="max-w-[1400px] mx-auto px-6 ">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -98,16 +98,16 @@ export default function Property2() {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.5 }}
                     className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  relative  ">
-                    {property2.map((property2) => (
+                    {Property3.map((Property3) => (
                         <div
-                            key={property2.id}
+                            key={Property3.id}
                             className="group bg-[var(--background2)] p-2 border border-[var(--siteColor3)] rounded-2xl relative transition-all duration-500 relative top-0 hover:top-[-5px]"
                         >
 
                             <span className="block relative">
-                                <Image src={property2.icon} alt="image" width={400} height={400} className="aspect-[2/1.5] object-cover rounded-xl" />
+                                <Image src={Property3.icon} alt="image" width={400} height={400} className="aspect-[2/1.5] object-cover rounded-xl" />
                                 <div className="absolute top-[10px] right-[10px] flex gap-2">
-                                    <span className=" bg-[#ffa500] text-white font-light text-xs rounded-full px-2 py-[2px]">{property2.status}</span>
+                                    <span className=" bg-[#ffa500] text-white font-light text-xs rounded-full px-2 py-[2px]">{Property3.status}</span>
 
                                 </div>
                                 
@@ -116,13 +116,13 @@ export default function Property2() {
                             <div className="p-3">
                                 <div className="flex gap-4 items-center mb-2">
 
-                                    <h3 className="text-[18px] font-semibold">{property2.title}</h3>
+                                    <h3 className="text-[18px] font-semibold">{Property3.title}</h3>
                                 </div>
                                 <p className="text-sm  leading-snug text-1 font-light">
-                                    {property2.land}
+                                    {Property3.land}
                                 </p>
                                 <p className="text-sm  leading-snug text-1 py-1 font-light">
-                                    {property2.location}
+                                    {Property3.location}
                                 </p>
                                 
                             </div>
