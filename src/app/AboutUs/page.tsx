@@ -8,6 +8,7 @@ import { useStaggeredFadeUp } from "../components/useStaggeredFadeUp";
 import Header from "../components/Header";
 import Hero2 from "../components/Hero2";
 import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 
 import Footer from "../components/Footer";
 
@@ -25,13 +26,13 @@ export default function Home() {
         heading_en="About Us"
         breadcrumbPosition="left"
       />
-      <Features />
-      <section className="bg-[var(--siteColor)] py-14 lg:py-24 rounded-3xl relative top-shape overflow-hidden">
-        <div className="max-w-[1360px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+      
+      <section className="py-14 lg:pt-24 lg:pb-10 rounded-3xl relative top-shape overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="relative flex justify-center  lg:flex h-full">
 
             <Image
-              src="/about-us2.png"
+              src="/about.jpg"
               alt="Business for Success"
               width={1000}
               height={1000}
@@ -40,11 +41,11 @@ export default function Home() {
 
 
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col max-w-[560px]">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }} className="heading flex flex-col gap-4   mb-10">
 
               <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm justify-center md:justify-start">
@@ -53,11 +54,11 @@ export default function Home() {
                 </svg>
                 Get to Know Us
               </div>
-              <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px] max-w-[500px] font-medium mb-1 leading-tight text-site">
-               Trusted provider of comprehensive attestation and document solutions
+              <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px] max-w-[600px] font-medium mb-1 leading-tight text-site">
+              HooBuy Real Estate: Your Trusted Kerala Property Partner
               </h2>
               <p className="text-md  leading-snug  font-light">
-                 We specialize in assisting individuals, professionals, and corporate clients in validating and legalizing official documents for use within the UAE and abroad. From educational certificates and marriage licenses to commercial contracts and legal paperwork, we ensure your documents are processed accurately, efficiently, and in full compliance with UAE regulatory standards.<br /><br /> Based in Dubai, our operations are supported by a dedicated team of attestation experts with deep knowledge of procedures involving the Ministry of Foreign Affairs (MOFA), embassies, consulates, and other key authorities.
+                HooBuy Real Estate is a Kerala-based property platform dedicated to making buying and selling homes simple, transparent, and stress‑free. With deep local market knowledge and a growing network of trusted partners, HooBuy connects buyers, sellers, and investors with the right opportunities at the right time. The team supports clients through each step of the journey – property discovery, site visits, negotiations, documentation, and closing – with honest guidance and timely communication.
                 </p>
 
             </motion.div>
@@ -80,7 +81,7 @@ export default function Home() {
                   <h3 className="text-[18px] font-semibold">Our Mission</h3>
                 </div>
                 <p className="text-sm  leading-snug text-1 mt-4 font-light">
-                 Our mission is to transform the attestation experience into a seamless, reliable, and stress-free journey. We aim to simplify the most complex processes and ensure that every document is handled with precision and care. Through professional expertise, clear communication, and strict quality control, we help people access global opportunities without the barriers that typically slow them down. HooBuy exists to make international documentation simple, secure, and accessible for everyone.
+                To simplify and make transparent the home buying and selling process in Kerala, empowering buyers, sellers, and investors with local expertise, trusted partnerships, and end-to-end support for stress-free real estate journeys.
                 </p>
 
               </div>
@@ -95,7 +96,7 @@ export default function Home() {
                   <h3 className="text-[18px] font-semibold">Our Vision</h3>
                 </div>
                 <p className="text-sm  leading-snug text-1 mt-4 font-light">
-                 We envision HooBuy as the leading attestation company in the UAE and one of the most trusted names in global documentation. A future where every individual, business, and institution can rely on our services with absolute confidence. We aim to expand our capabilities across more countries, integrate advanced technologies, enhance customer experience, and build long-lasting relationships through results that speak for themselves. Our vision is to set the highest standard of service excellence in the global attestation industry.
+               A Kerala where every property transaction is seamless, honest, and timely—connecting the right people with the perfect opportunities through deep market knowledge and unwavering client guidance.
                 </p>
 
               </div>
@@ -108,6 +109,8 @@ export default function Home() {
 
         </div>
       </section>
+      <Features />
+       <Testimonials />
 
 
       <Footer />

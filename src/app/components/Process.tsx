@@ -62,7 +62,7 @@ const ProcessMain = () => {
 
   return (
     <section className="py-14 lg:py-24  rounded-3xl">
-      <div className="max-w-[1360px] mx-auto px-6 ">
+      <div className="max-w-[1400px] mx-auto px-6 ">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -69,7 +69,7 @@ const Services = () => {
 
   return (
     <section id="services" className="section py-14 lg:py-24 overflow-hidden px-3 lg:px-6">
-      <div className="grid-wrapper max-w-[1360px] mx-auto lg:px-6">
+      <div className="grid-wrapper max-w-[1400px] mx-auto lg:px-6">
         <div className="stacked-content">
           <div className="content-wrapper">
             <div className="service-list grid gap-y-10 lg:gap-y-30">

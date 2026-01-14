@@ -69,6 +69,67 @@ const propertyEn = [
 
         link: "/"
     },
+    {
+        id: '05',
+              icon: "/property3.jpg",
+
+        title: "Land for sale",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+  
+
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '06',
+              icon: "/property3.jpg",
+
+        title: "Land for sale",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+  
+
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '07',
+              icon: "/property3.jpg",
+
+        title: "Land for sale",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+  
+
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '08',
+              icon: "/property3.jpg",
+
+        title: "Land for sale",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+  
+
+        range: "Premium",
+
+
+        link: "/"
+    },
+
 
 ];
 
@@ -81,7 +142,7 @@ export default function Property() {
     return (
         <section id="property" className="py-14 lg:py-24   relative bg-white rounded-3xl">
             <div className="max-w-[1400px] mx-auto px-6 ">
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
@@ -96,12 +157,12 @@ export default function Property() {
                         </h2>
                     </div>
                     <AnimatedButton label="View More" className="mt-6 w-fit" />
-                </motion.div>
+                </motion.div> */}
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.5 }}
                     className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  relative  ">
                     {property.map((property) => (

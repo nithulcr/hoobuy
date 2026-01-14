@@ -28,9 +28,9 @@ const Hero2 = ({
                 : "justify-start";
 
     return (
-        <section className="mt-[95px] rounded-3xl overflow-hidden w-full bg-[var(--siteColor)]  flex flex-col justify-center items-center text-center relative">
+        <section className="mt-[80px] rounded-3xl overflow-hidden w-full bg-[var(--siteColor)]  flex flex-col justify-center items-center text-center relative">
             <div
-                className={`hero2-bg absolute inset-0 bg-[url('/hero2.png')] bg-[cover]`}
+                className={`hero2-bg absolute bg-center inset-0 bg-[url('/hero4.jpg')] bg-[cover]`}
             ></div>
 
             <motion.div initial={{ opacity: 0, y: 20 }}

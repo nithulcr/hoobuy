@@ -94,68 +94,23 @@ export default function ContactSection() {
             </ul>
           </div>
 
-          {/* Right: Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl bg-white lg:p-12 p-6 space-y-8"
-          >
-            <h4 className="text-2xl lg:text-3xl font-semibold max-w-xl">Feel Free to Get in Touch or Visit our
-              Location.</h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-              <input
-                name="name"
-                className="w-full bg-white border-b-[#00000063] border-b py-3 focus:outline-none placeholder-[#BFBCBC]"
-                type="text"
-                placeholder={"Full Name"}
-                required
-              />
-              <div>
-
-                <input
-                  name="email"
-                  className="w-full bg-white border-b-[#00000063] border-b py-3 focus:outline-none placeholder-[#BFBCBC]"
-                  type="email"
-                  placeholder={"Email"}
-                  required
-                />
-              </div>
-
-              <input
-                name="number"
-                className="w-full bg-white border-b-[#00000063] border-b py-3 focus:outline-none placeholder-[#BFBCBC]"
-                type="text"
-                placeholder={"Phone number"}
-                required
-              />
-            </div>
-
-            <div>
-
-              <textarea
-                name="message"
-                className="w-full bg-white border-b-[#00000063] border-b min-h-[140px] py-3 focus:outline-none resize-none placeholder-[#BFBCBC]"
-                rows={3}
-                placeholder={"Type Your Message"}
-                required
-              />
-            </div>
-            <div className="mt-10 justify-self-end">
-
-              <AnimatedButton type="submit"
-                label="Send message" className="w-fit text-white lg:mt-2" />
-            </div>
-            <div className="mt-3 justify-self-end message-status">
-              {messageStatus && (
-                <p className={`${messageStatus.type === 'success' ? 'text-blue-500' : 'text-red-500'}`}>
-                  {messageStatus.message}
-                </p>
-              )}
-            </div>
-          </form>
         </div>
 
 
+      </section>
+      <section className="mt-16 ">
+
+        <div className="overflow-hidden rounded-2xl ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6352046956276!2d75.50005177453178!3d11.930455836849688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43bf4e8424b29%3A0xb4a8e71b4553276f!2sHOOBUY%20REALTORS!5e0!3m2!1sen!2sin!4v1768391229098!5m2!1sen!2sin"
+            className="w-full h-[450px]"
+            loading="lazy"
+            height={450}
+            referrerPolicy="no-referrer"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+          />
+        </div>
       </section>
 
     </>

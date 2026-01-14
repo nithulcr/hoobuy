@@ -92,7 +92,7 @@ export default function DistrictsPage() {
 
     return (
         <section id="features" className="py-14 lg:py-24  relative ">
-            <div className="max-w-[1360px] mx-auto px-6">
+            <div className="max-w-[1400px] mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function DistrictsPage() {
                         Explore by Property District
                     </h2>
                 </motion.div>
-                <div className="flex flex-col lg:gap-3 gap-2 bg-white rounded-2xl p-10 w-fit mx-auto">
+                <div className="flex flex-col lg:gap-3 gap-2 bg-white rounded-2xl p-4 lg:p-10 w-fit mx-auto">
 
                     <div
                         className="flex items-center justify-center flex-wrap lg:gap-3 gap-2  relative  ">
@@ -126,10 +126,10 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[6px] text-white relative bg-[var(--siteColor)]"
                                 >
 
-                                    <span className="flex items-center justify-center bg-white rounded-full p-1 ">
+                                    {/* <span className="flex items-center justify-center bg-white rounded-full p-1 ">
                                         <svg
                                             width="24"
                                             height="24"
@@ -151,8 +151,8 @@ export default function DistrictsPage() {
                                             />
                                         </svg>
 
-                                    </span>
-                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
+                                    </span> */}
+                                    <h3 className="lg:text-[15px] text-[12px] lg:px-4 px-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>
@@ -170,10 +170,10 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[6px] text-white relative bg-[var(--siteColor)]"
                                 >
 
-                                    <span className="flex items-center justify-center bg-white rounded-full p-1">
+                                    {/* <span className="flex items-center justify-center bg-white rounded-full p-1">
                                         <svg
                                             width="24"
                                             height="24"
@@ -195,8 +195,8 @@ export default function DistrictsPage() {
                                             />
                                         </svg>
 
-                                    </span>
-                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
+                                    </span> */}
+                                    <h3 className="lg:text-[15px] text-[12px] lg:px-4 px-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>
@@ -214,10 +214,10 @@ export default function DistrictsPage() {
                             >
                                 <div
 
-                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[2px] text-white relative bg-[var(--siteColor)]"
+                                    className="flex items-center gap-1 lg:gap-2 rounded-4xl p-[6px] text-white relative bg-[var(--siteColor)]"
                                 >
 
-                                    <span className="flex items-center justify-center bg-white rounded-full p-1">
+                                    {/* <span className="flex items-center justify-center bg-white rounded-full p-1">
                                         <svg
                                             width="24"
                                             height="24"
@@ -239,8 +239,8 @@ export default function DistrictsPage() {
                                             />
                                         </svg>
 
-                                    </span>
-                                    <h3 className="lg:text-[15px] text-[12px] lg:pr-4 pr-2 font-light">{feature.title}</h3>
+                                    </span> */}
+                                    <h3 className="lg:text-[15px] text-[12px] lg:px-4 px-2 font-light">{feature.title}</h3>
 
                                 </div>
                             </motion.div>

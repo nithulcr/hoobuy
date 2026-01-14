@@ -10,36 +10,22 @@ import AnimatedButton from "./AnimatedButton";
 
 const navItems = [
     { href: "/", label: "Home" },
-    { href: "#", label: "About us" },
+    { href: "/AboutUs", label: "About us" },
 
     {
-        label: "Locations",
+        label: "Properties",
         href: "#",
         submenu: [
             
-                { href: "", label: "Thiruvananthapuram " },
-                { href: "", label: "Kollam " },
-                { href: "", label: "Pathanamthitta " },
-                { href: "", label: "Alappuzha " },
-                { href: "", label: "Kottayam " },
-                { href: "", label: "Idukki " },
-                { href: "", label: "Ernakulam " },
-                { href: "", label: "Thrissur " },
-                { href: "", label: "Palakkad " },
-                { href: "", label: "Malappuram " },
-                { href: "", label: "Kozhikode " },
-                { href: "", label: "Wayanad " },
-                { href: "", label: "Kannur " },
-                { href: "", label: "Kasaragod " },
-            
-
-
-
-
+                { href: "", label: "Residential" },
+                { href: "", label: "Commercial" },
+                { href: "", label: "Agricultural / Farmland" },
+                { href: "", label: "Industrial" },
+                { href: "", label: "Mixed- Others" },
+                { href: "/Properties", label: "All Properties" },          
         ],
     },
-    { href: "#", label: "Properties" },
-    { href: "#", label: "Blogs" },
+    { href: "/blogs", label: "Blogs" },
     { href: "/ContactUs", label: "Contact Us" },
 ];
 
@@ -91,7 +77,7 @@ export default function Header() {
         >
             {pathname === "/" && (
                 <div className="w-full bg-[var(--siteColor)] hidden min-[990px]:block rounded-b-[16px]">
-                    <div className="text-white grid grid-cols-2 items-center text-sm max-w-[1360px] mx-auto">
+                    <div className="text-white grid grid-cols-2 items-center text-sm max-w-[1400px] mx-auto">
                         <div className="h-full">
                             <div className="h-full max-w-[700px] flex items-center space-x-6 top-header-left relative ml-auto px-6 py-2">
                                 <p className="font-light">Time to Unlock Your Perfect Property?</p>
@@ -108,16 +94,7 @@ export default function Header() {
                         </div>
                         <div className="h-full">
                             <div className="max-w-[700px] h-full flex items-center justify-end overflow-hidden gap-8 relative px-6">
-                                <div className="items-center justify-center space-x-2 flex relative py-2 h-full pr-4">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12.7168 2.25537C18.2398 2.25537 22.7168 6.73237 22.7168 12.2554C22.7168 17.7784 18.2398 22.2554 12.7168 22.2554C7.1938 22.2554 2.7168 17.7784 2.7168 12.2554C2.7168 6.73237 7.1938 2.25537 12.7168 2.25537ZM12.7168 4.25537C10.5951 4.25537 8.56023 5.09823 7.05994 6.59852C5.55965 8.09881 4.7168 10.1336 4.7168 12.2554C4.7168 14.3771 5.55965 16.4119 7.05994 17.9122C8.56023 19.4125 10.5951 20.2554 12.7168 20.2554C14.8385 20.2554 16.8734 19.4125 18.3737 17.9122C19.8739 16.4119 20.7168 14.3771 20.7168 12.2554C20.7168 10.1336 19.8739 8.09881 18.3737 6.59852C16.8734 5.09823 14.8385 4.25537 12.7168 4.25537ZM12.7168 6.25537C12.9617 6.2554 13.1981 6.34533 13.3812 6.50809C13.5642 6.67085 13.6811 6.89512 13.7098 7.13837L13.7168 7.25537V11.8414L16.4238 14.5484C16.6031 14.7283 16.7073 14.9698 16.715 15.2238C16.7228 15.4777 16.6336 15.7251 16.4655 15.9156C16.2975 16.1062 16.0632 16.2257 15.8103 16.2498C15.5574 16.2739 15.3048 16.2008 15.1038 16.0454L15.0098 15.9624L12.0098 12.9624C11.8544 12.8068 11.7546 12.6044 11.7258 12.3864L11.7168 12.2554V7.25537C11.7168 6.99015 11.8222 6.7358 12.0097 6.54826C12.1972 6.36073 12.4516 6.25537 12.7168 6.25537Z"
-                                            fill="white"
-                                        />
-                                    </svg>
-
-                                    <span className="font-light">Working: 8.00am - 5.00pm</span>
-                                </div>
+                               
                                 <div className="flex flex-row gap-4 relative h-full header-top-social items-center">
 
                                     <a href="https://x.com" aria-label="X" target="_blank" rel="noopener noreferrer" className="w-5 h-5">
@@ -171,7 +148,7 @@ export default function Header() {
                     (pathname === "/" ? " rounded-t-[16px]" : "rounded-b-[16px]")
                 }
             >
-                <div className="max-w-[1360px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">
+                <div className="max-w-[1400px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">
                     <div className="text-2xl font-bold h-full align-content-center flex">
                         <Link href="/" className="items-center flex">
                             <img src="/logo.png" alt="Logo" width={160} height={50} className="w-[140px] lg:w-[160px]" />

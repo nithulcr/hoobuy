@@ -75,7 +75,7 @@ export default function Testimonials() {
 
     return (
         <section className="bg-[var(--siteColor3)] rounded-3xl testimonials-section overflow-hidden relative lg:py-24 py-14 ">
-            <div className="mx-auto  max-w-[1360px] lg:pl-6  flex flex-col items-center justify-center">
+            <div className="mx-auto  max-w-[1400px] lg:pl-6  flex flex-col items-center justify-center">
                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

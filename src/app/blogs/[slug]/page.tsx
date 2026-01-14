@@ -47,7 +47,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
 
       <section className="other-section pt-10 lg:pt-22 pb-7 lg:pb-24 overflow-hidden relative">
 
-        <div className="max-w-[1360px] px-6 w-full pt-10 mx-auto  relative">
+        <div className="max-w-[1400px] px-6 w-full pt-10 mx-auto  relative">
 
 
           <div className='mx-auto'>
@@ -68,7 +68,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
         </div>
       </section >
       <section className="py-10 overflow-hidden relative">
-        <div className="max-w-[1360px] px-6 w-full mx-auto  relative">
+        <div className="max-w-[1400px] px-6 w-full mx-auto  relative">
           <h4 className='text-2xl font-medium'>Recent Posts</h4>
 
           <div className='mt-5'>

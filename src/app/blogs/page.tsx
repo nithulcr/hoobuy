@@ -34,7 +34,7 @@ export default function BlogListPage() {
       <section ref={blogsRef} className=" other-section lg:py-24 py-14   overflow-hidden relative">
 
 
-        <div className='max-w-[1360px] mx-auto px-6'>
+        <div className='max-w-[1400px] mx-auto px-6'>
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-14 fade-up">
             {blogsToDisplay.map((post) => (

@@ -89,7 +89,7 @@ font-family: "Mona Sans", sans-serif;
   font-weight: 200;
 }
 .hero-section{
-  background: url(/bg4.jpg);
+  /* background: url(/bg4.jpg); */
   background-position:right bottom;
   background-size: cover;
 }
@@ -98,7 +98,7 @@ content: '';
 position: absolute;
 top: 0px;
 left: 0px;
-background:rgba(9, 66, 77, 0.8);
+background:rgba(9, 66, 77, 0.7);
 width: 100%;
 height:100%;
 
@@ -135,7 +135,7 @@ height:100%;
   transition: .3s;
 }
 .index-page .bg-nav-cover {
-  top: -42px;
+  top: -38px;
 }
 .bg-nav-cover .main-header {
   height: 70px;
@@ -174,7 +174,7 @@ height:100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #1a5867, transparent);
+  background: linear-gradient(45deg, #1a5867, #33869b9a);
  /* box-shadow: inset 0 0 0 2000px #1a586733; */
   z-index: 1;
 
@@ -514,8 +514,11 @@ h1 span{
 .megamenu-active-tab {
     background: var(--background);
 }
-.hero-section{
-  background: url(/bg-mob.jpg);
-  background-position:center bottom;
+.hero-section::before {
+
+  background: linear-gradient(360deg, #1a5867, #33869b9a);
+
+
 }
+
 }
