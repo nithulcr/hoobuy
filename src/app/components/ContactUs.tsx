@@ -59,7 +59,7 @@ export default function ContactSection() {
                 </span>
                 <div className="flex flex-col gap-1 text-center">
                   <span className="text-site text-lg">Our Location</span>
-                  <span className="text-1 text-sm font-light">Al Saqar Business Tower, 13th Floor, Sheikh Zayed Road</span>
+                  <span className="text-1 text-sm font-light">Chalod, Kannur, Kerala</span>
                 </div>
               </li>
 
@@ -75,7 +75,7 @@ export default function ContactSection() {
                 </span>
                 <div className="flex flex-col gap-1 text-center">
                   <span className="text-site text-lg">Work with us</span>
-                  <a href="mailto:Info@safeattestuae.com" className="text-1 text-sm font-light">Info@safeattestuae.com</a>
+                  <a href="mailto:Info@safeattestuae.com" className="text-1 text-sm font-light">Info@hoobuy.com</a>
                 </div>
               </li>
               <li className="flex items-center flex-col gap-4 bg-white rounded-2xl p-6 lg:p-10">
@@ -87,7 +87,7 @@ export default function ContactSection() {
                 </span>
                 <div className="flex flex-col gap-1 text-center">
                   <span className="text-site text-lg">Call Us 24/7</span>
-                  <span className="text-1 text-sm font-light">+971 50 954 8130</span>
+                  <span className="text-1 text-sm font-light">+91 9999 999 999</span>
                 </div>
               </li>
 
