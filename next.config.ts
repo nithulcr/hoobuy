@@ -1,23 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  distDir: '.next',
-
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.externals.push('validator');
-    }
-    return config;
-  },
-  /* config options here */
   images: {
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'inline',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; HooBuy;",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pink-sheep-929430.hostingersite.com",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
+    ],
   },
+  
 };
 
 export default nextConfig;

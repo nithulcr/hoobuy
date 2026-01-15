@@ -1,93 +1,171 @@
-
-"use client";
-import { blogPosts } from '../data';
 import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import AnimatedButton from "../../components/AnimatedButton";
+import he from 'he';
 import Link from 'next/link';
-import React, { useState, use } from 'react';
-import Hero2 from "../../components/Hero2";
+import React from 'react';
+import AnimatedButton from "../../components/AnimatedButton";
 
 
-export default function BlogPostPage({ params: initialParams }: { params: Promise<{ slug: string }> }) {
-  const params = use(initialParams);
-
-  const relatedBlogPosts = blogPosts.filter((p) => p.slug !== params.slug);
-
-  // Shuffle related posts to get a random selection
-  for (let i = relatedBlogPosts.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [relatedBlogPosts[i], relatedBlogPosts[j]] = [relatedBlogPosts[j], relatedBlogPosts[i]];
-  }
-
-  const [visibleRelatedBlogsCount, setVisibleRelatedBlogsCount] = useState(3);
-
-  const handleLoadMoreRelated = () => {
-    setVisibleRelatedBlogsCount(prevCount => prevCount + 3);
+interface Post {
+  id: number;
+  slug: string;
+  date: string;
+  title: {
+    rendered: string;
   };
+  content: {
+    rendered: string;
+  };
+  _embedded?: {
+    'wp:featuredmedia'?: {
+      source_url: string;
+    }[];
+  };
+}
 
-  const blogsToDisplay = relatedBlogPosts.slice(0, visibleRelatedBlogsCount);
-  const hasMoreRelatedBlogs = visibleRelatedBlogsCount < relatedBlogPosts.length;
+async function getPost(slug: string): Promise<Post | null> {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts?slug=${slug}&_embed`, {
+      headers: {
+        'Authorization': 'Basic ' + Buffer.from(`${process.env.NEXT_PUBLIC_WP_USERNAME}:${process.env.NEXT_PUBLIC_WP_APPLICATION_PASSWORD}`).toString('base64'),
+      },
+      next: { revalidate: 60 } // Revalidate every 60 seconds
+    });
+    if (!response.ok) {
+      console.error(`Failed to fetch post for slug: ${slug}, status: ${response.status}, body:`, await response.text());
+      return null;
+    }
+    const posts = await response.json();
+    return posts.length > 0 ? posts[0] : null;
+  } catch (error) {
+    console.error('Error in getPost:', error);
+    return null;
+  }
+}
 
-  const post = blogPosts.find((post) => post.slug === params.slug);
+async function getRelatedPosts(currentSlug: string): Promise<Post[]> {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts?_embed`, {
+      headers: {
+        'Authorization': 'Basic ' + Buffer.from(`${process.env.NEXT_PUBLIC_WP_USERNAME}:${process.env.NEXT_PUBLIC_WP_APPLICATION_PASSWORD}`).toString('base64'),
+      },
+      next: { revalidate: 60 } // Revalidate every 60 seconds
+    });
+    if (!response.ok) {
+      console.error(`Failed to fetch related posts, status: ${response.status}, body:`, await response.text());
+      return [];
+    }
+    const allPosts: Post[] = await response.json();
+    const related = allPosts.filter(p => p.slug !== currentSlug).slice(0, 3);
+    return related;
+  } catch (error) {
+    console.error('Error in getRelatedPosts:', error);
+    return [];
+  }
+}
+
+export async function generateStaticParams() {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}/posts`,
+    {
+      headers: {
+        'Authorization': 'Basic ' + Buffer.from(`${process.env.NEXT_PUBLIC_WP_USERNAME}:${process.env.NEXT_PUBLIC_WP_APPLICATION_PASSWORD}`).toString('base64'),
+      },
+    });
+    if (!response.ok) {
+      console.error(`Failed to fetch posts for generateStaticParams, status: ${response.status}, body:`, await response.text());
+      return [];
+    }
+    const posts: Post[] = await response.json();
+   
+    return posts.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error);
+    return [];
+  }
+}
+
+
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = await getPost(params.slug);
+  const relatedPosts = await getRelatedPosts(params.slug);
 
   if (!post) {
     return <div>Post not found</div>;
   }
 
+  const decodedTitle = post.title.rendered ? he.decode(post.title.rendered) : '';
+  const decodedContent = post.content.rendered ? he.decode(post.content.rendered) : '';
+
   return (
     <>
       <Header />
-      <Hero2
-        heading_en="Blog Details"
-        
-        breadcrumbPosition="left"
-      />
 
-      <section className="other-section pt-10 lg:pt-22 pb-7 lg:pb-24 overflow-hidden relative">
+      <section className="other-section pt-14 lg:pt-24 pb-1 lg:pb-20 overflow-hidden relative mt-[50px]">
+        <div className="max-w-[1200px] px-6 w-full mx-auto relative">
+          <div className='max-w-6xl mx-auto text-center'>
+            <h1 className="text-3xl lg:text-4xl font-semibold mb-8">{decodedTitle}</h1>
 
-        <div className="max-w-[1400px] px-6 w-full pt-10 mx-auto  relative">
-
-
-          <div className='mx-auto'>
-            <h1 className="text-3xl font-bold mb-8 text-center">{post.title}</h1>
-
-
-            <div className='site-card2 py-8 p-0-card'>
-              <Image src={post.image} alt={post.title} width={1250} height={400} className="mx-auto" />
+            <div className='site-card2 my-8 p-0-card'>
+              <Image 
+                src={post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/blog1.jpg'}
+                alt={decodedTitle}
+                width={800}
+                height={400}
+                className="mx-auto rounded-3xl"
+              />
             </div>
-            <p className=" mb-6 mx-auto opacity-70 pt-5">
-              {post.content}
-            </p>
-
+            <div 
+              className="mb-6 max-w-3xl mx-auto blog-content blog-details" 
+              dangerouslySetInnerHTML={{ __html: decodedContent }}
+            />
 
           </div>
 
 
         </div>
       </section >
-      <section className="py-10 overflow-hidden relative">
-        <div className="max-w-[1400px] px-6 w-full mx-auto  relative">
-          <h4 className='text-2xl font-medium'>Recent Posts</h4>
+      <section className="pt-7 lg:pt-20 pb-14 lg:pb-20 overflow-hidden relative">
+        <div className="max-w-[1460px] px-6 w-full mx-auto relative">
+          <h4 className='text-2xl lg:text-4xl font-medium text-center'>Related Insights</h4>
 
-          <div className='mt-5'>
+          <div className='mt-10 lg:mt-15'>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-14'>
-              {blogsToDisplay.map((relatedPost) => (
-                <div key={relatedPost.slug} className="site-card blog-card rounded-3xl bg-white">
-                  <Image src={post.image} alt="blog img" width="400" height="250" className=' w-full rounded-xl' />
-                  <div className='p-5 pt-3'>
-                    <span className='text-sm text-[var(--color)] fw-200'>{post.date}</span>
-                    <h2 className="text-2xl font-semibold my-3 line-clamp-3 max-w-[80%]">
-                      <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
-                    </h2>
-                    <p className="text-[#404040] font-normal line-clamp-5">By {post.content}</p>
-                    <AnimatedButton href={`/blogs/${post.slug}`} label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
+              {relatedPosts.map((relatedPost) => {
+                const featuredImage = relatedPost._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+                if (!featuredImage) {
+                  console.warn(`Featured image not found for related post: "${relatedPost.title.rendered}"`);
+                }
+                return (
+                  <div key={relatedPost.id} className="site-card blog-card rounded-2xl bg-white">
+                    <Image 
+                      src={featuredImage || '/blog1.jpg'}
+                      alt="blog img" 
+                      width={400} 
+                      height={250} 
+                      className='w-full rounded-xl aspect-[2/1.2] object-cover' 
+                    />
+                    <div className='p-5 pt-3'>
+                      <span className='text-sm opacity-70 fw-200'>{new Date(relatedPost.date).toLocaleDateString()}</span>
+                      <h2 className="text-xl font-semibold my-3 line-clamp-2 min-h-[50px]">
+                        <Link href={`/blogs/${relatedPost.slug}`}>{relatedPost.title.rendered}</Link>
+                      </h2>
+                      {/* <div 
+                        className="opacity-70 line-clamp-4 text-sm" 
+                        dangerouslySetInnerHTML={{ __html: relatedPost.content.rendered }}
+                      /> */}
+                     <AnimatedButton href={`/blogs/${relatedPost.slug}`} label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
 
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
+
+
 
           </div>
         </div>
@@ -95,14 +173,5 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
 
       <Footer />
     </>
-  );
-}
-
-// -- Re-usable Check SVG icon (no JSX namespace needed) --
-function CheckSVG() {
-  return (
-    <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4.74999 9.3448L3.16699 10.9278L7.91699 15.6778L15.833 7.7608L14.25 6.1778L7.91699 12.5108L4.74999 9.3448Z" fill="#8AA5FF" />
-    </svg>
   );
 }
