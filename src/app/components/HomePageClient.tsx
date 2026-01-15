@@ -14,6 +14,8 @@ import ProjectScroller from "./ProjectScroller";
 
 import Features from "./Features";
 import Services from "./Services";
+
+
 import Countrys from "./Countrys";
 import Testimonials from "./Testimonials";
 import Process from "./Process";
@@ -53,23 +55,12 @@ export default function HomePageClient() {
           <AboutSection />
           <FeaturedProperty />
           <ProjectScroller />
-
           <FeaturedProperty2 />
-
-
-
           <Features />
-
           <Services />
           <Countrys />
           <Testimonials />
           <Process />
-
-
-
-
-
-
           <Footer />
         </>
       )}

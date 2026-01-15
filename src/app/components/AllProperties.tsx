@@ -4,31 +4,37 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
 import Image from "next/image";
-import AnimatedButton from "./AnimatedButton";
-import { properties } from "../Properties/data"; // ← import once
 
-export default function Property() {
-    const fadeRef = useRef<HTMLHeadingElement>(null);
-    useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
+export type PropertyItem = {
+  id: number;
+  slug: string;
+  title: string;
+  land: string;
+  location: string;
+  price: string;
+  range: string;
+  icon: string;
+};
 
-    return (
-        <section
-            id="property"
-            className="py-10 lg:py-14 relative"
+export default function Property({ properties }: { properties: PropertyItem[] }) {
+  const fadeRef = useRef<HTMLHeadingElement>(null);
+  useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
+
+  return (
+    <section id="property" className="py-10 lg:py-14 relative">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative"
         >
-            <div className="max-w-[1400px] mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative"
-                >
-                    {properties.map((property) => (
-                        <div
-                            key={property.id}
-                            className="group bg-white p-2 border border-[var(--siteColor3)] rounded-2xl relative transition-all duration-500 relative top-0 hover:top-[-5px]"
-                        >
+          {properties.map((property) => (
+            <div
+              key={property.id}
+              className="group bg-white p-2 border border-[var(--siteColor3)] rounded-2xl relative transition-all duration-500 relative top-0 hover:top-[-5px]"
+            >
                             <span className="block relative">
                                 <Image
                                     src={property.icon}
@@ -94,6 +100,7 @@ export default function Property() {
                     ))}
                 </motion.div>
             </div>
+
         </section>
     );
 }

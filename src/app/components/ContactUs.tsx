@@ -40,8 +40,11 @@ export default function ContactSection() {
                   </svg>
                   Get in touch
                 </div>
+                <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px] max-w-[600px] font-medium  leading-tight text-site">
+                  Have Questions?
+                </h2>
                 <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px] max-w-[600px] font-medium mb-1 leading-tight text-site">
-                  Have Questions?<br></br>Our Team is Ready Anytime
+                 Our Team is Ready Anytime
                 </h2>
                 <p className="text-md  leading-snug  font-light  max-w-[560px]">
                   Got questions or need guidance? Our team is always ready to help you take the next step—whether it&apos;s a quick inquiry or a full project discussion.

@@ -106,7 +106,7 @@ export default function DistrictsPage() {
                             height={30}
                             className="object-contain"
                         />
-                        Experts All
+                        Explore All
                     </div>
                     <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
                         Explore by Property District
