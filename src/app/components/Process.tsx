@@ -71,10 +71,10 @@ const ProcessMain = () => {
           <div>
             <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm justify-center md:justify-start">
               <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
-              working Process
+            News & Insights
             </div>
             <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px]  font-medium mb-1 leading-tight text-site">
-              Strategies & Insights.
+              Property Insights & Stories
             </h2>
           </div>
           <div className="flex items-center gap-2">

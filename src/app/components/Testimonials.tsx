@@ -89,10 +89,10 @@ export default function Testimonials() {
                                                     height={30}
                                                     className="object-contain"
                                                 />
-                       read reviews
+                      Customers reviews
                     </div>
                     <h2 ref={fadeRef} className="text-center fade-up-stagger text-3xl lg:text-[36px] font-medium mb-1 leading-tight text-site">
-                       Stories of trust
+                       Real Stories, Real Trust
                     </h2>
                 </motion.div>
 
@@ -157,7 +157,24 @@ export default function Testimonials() {
                                 <SwiperSlide key={idx}>
                                     <div className="bg-[var(--siteColor)] rounded-[16px] lg:rounded-[26px]  p-4  lg:p-6  relative  flex flex-col h-full  ">
 
-                                        <div className="flex items-center gap-2 mb-2">
+                                        
+
+                                       
+                                        <div className="flex items-center">
+                                            <img
+                                                src={item.avatar}
+                                                alt={item.name}
+                                                width={40}
+                                                height={40}
+                                                className="rounded-full mr-3 object-cover border border-[#23243b]"
+                                            />
+                                            <div>
+                                                <div className="text-lg">{item.name}</div>
+                                                <div className="text-xs font-light2">{item.role}</div>
+                                            </div>
+                                        </div>
+                                         <p className="my-3  text-lg font-light2">&ldquo;{item.review}&rdquo;</p>
+                                        <div className="flex items-center gap-2">
                                             <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="15.942" cy="15.7316" r="15.1295" fill="white" />
                                                 <g clipPath="url(#clip0_1036_537)">
@@ -192,21 +209,6 @@ export default function Testimonials() {
                                                 <path d="M9 3.9043L8 6.9043H4L5 10.9043L2 12.9043L5 14.9043L4 18.9043H8L9 21.9043L12 19.9043L15 21.9043L16 18.9043H20L19 14.9043L22 12.9043L19 10.9043L20 6.9043H16L15 3.9043L12 5.9043L9 3.9043ZM16 8.9043L17 9.9043L10 16.9043L7 13.9043L8 12.9043L10 14.9043L16 8.9043Z" fill="#278CFF" />
                                             </svg>
 
-                                        </div>
-
-                                        <p className="mt-1  text-lg font-light2">&ldquo;{item.review}&rdquo;</p>
-                                        <div className="flex items-center mt-3">
-                                            <img
-                                                src={item.avatar}
-                                                alt={item.name}
-                                                width={40}
-                                                height={40}
-                                                className="rounded-full mr-3 object-cover border border-[#23243b]"
-                                            />
-                                            <div>
-                                                <div className="text-lg">{item.name}</div>
-                                                <div className="text-xs font-light2">{item.role}</div>
-                                            </div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
