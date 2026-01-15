@@ -23,7 +23,7 @@ export const properties: PropertyItem[] = [
     price: "₹ 8 lakh/cent",
     range: "Premium",
     description:
-      "Prime roadside land suitable for residential or commercial development with easy access to town.",
+      "Prime roadside land suitable for residential or commercial development with easy access to town. Well-positioned plot with good frontage, ideal for villa projects and long‑term investment.",
     images: ["/property1.jpg", "/property2.jpg", "/property3.jpg"],
   },
   {
@@ -36,7 +36,7 @@ export const properties: PropertyItem[] = [
     price: "₹ 8 lakh/cent",
     range: "Premium",
     description:
-      "Well-positioned plot with good frontage, ideal for villa projects and long‑term investment.",
+      "Well-positioned plot with good frontage, ideal for villa projects and long‑term investment. Prime roadside land suitable for residential or commercial development with easy access to town.",
     images: ["/property1.jpg", "/property2.jpg", "/property3.jpg"],
   },
   // ...repeat for ids 03–08 with unique slug and images if needed

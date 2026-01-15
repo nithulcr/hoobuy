@@ -55,10 +55,10 @@ export default function Home() {
                 Get to Know Us
               </div>
               <h2 ref={fadeRef} className="text-center md:text-left fade-up-stagger text-3xl lg:text-[36px] max-w-[600px] font-medium mb-1 leading-tight text-site">
-              HooBuy Real Estate: Your Trusted Kerala Property Partner
+              HOOBUY REALTORS Real Estate: Your Trusted Kerala Property Partner
               </h2>
               <p className="text-md  leading-snug  font-light">
-                HooBuy Real Estate is a Kerala-based property platform dedicated to making buying and selling homes simple, transparent, and stress‑free. With deep local market knowledge and a growing network of trusted partners, HooBuy connects buyers, sellers, and investors with the right opportunities at the right time. The team supports clients through each step of the journey – property discovery, site visits, negotiations, documentation, and closing – with honest guidance and timely communication.
+                HOOBUY REALTORS Real Estate is a Kerala-based property platform dedicated to making buying and selling homes simple, transparent, and stress‑free. With deep local market knowledge and a growing network of trusted partners, HOOBUY REALTORS connects buyers, sellers, and investors with the right opportunities at the right time. The team supports clients through each step of the journey – property discovery, site visits, negotiations, documentation, and closing – with honest guidance and timely communication.
                 </p>
 
             </motion.div>

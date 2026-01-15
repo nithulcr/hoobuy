@@ -35,7 +35,7 @@ const Hero = () => {
 
                             <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-2 lg:gap-4">
 
-                                <AnimatedButton label="Buy a Property" className="w-fit" />
+                                <AnimatedButton label="Buy a Property" className="w-fit transparent-btn5" />
                                 <AnimatedButton label="Sell a Property" className="w-fit transparent-btn transparent-btn4" />
 
 

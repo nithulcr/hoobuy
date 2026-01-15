@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
     <div className="bg-[var(--siteColor)] rounded-3xl mt-8  text-white font-normal">
       <div className="max-w-[1400px] mx-auto py-14 lg:py-18  px-6">
-        <div className="heading bg-[linear-gradient(to_right,_#d9fce4,_#33859a)] flex flex-col gap-4 md:flex-row justify-between md:items-center mb-10 md:mb-14 rounded-2xl mx-auto lg:p-10  p-5">
+        <div className="heading bg-[#eaf4f3] flex flex-col gap-4 md:flex-row justify-between md:items-center mb-10 md:mb-14 rounded-2xl mx-auto lg:p-10  p-5">
           <div>
 
             <h2 className="text-left fade-up-stagger text-2xl lg:text-[28px] max-w-[340px] font-medium  text-site">
@@ -208,7 +208,7 @@ export default function Footer() {
       
     </div>
     <div className="px-6">
-        <div className="py-5 text-sm  text-center">HooBuy - Copyright 2025. All rights reserved.</div>
+        <div className="py-5 text-sm  text-center">HOOBUY REALTORS - Copyright 2025. All rights reserved.</div>
 
       </div>
     </footer>

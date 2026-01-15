@@ -176,7 +176,7 @@ height:100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #1a5867, #33869b9a);
+  background:  var(--siteColor);
  /* box-shadow: inset 0 0 0 2000px #1a586733; */
   z-index: 1;
 
@@ -226,11 +226,23 @@ height:100%;
   cursor: pointer;
   font-weight: 500;
   font-weight: 300;
-    background: linear-gradient(270deg,  var(--siteColor) , #33869b);
+    background: var(--siteColor);
      border-radius: 36px;
        min-height: 53px;
 
 }
+.button.transparent-btn5 {
+
+    background: var(--siteColor2);
+
+
+}
+/* .button.transparent-btn5 *{
+
+
+    color: var(--siteColor);
+
+} */
 .button.no-icon{
   padding: 8px 14px 8px 14px;
 
@@ -541,7 +553,7 @@ h1 span{
 }
 .hero-section::before {
 
-  background: linear-gradient(360deg, #1a5867, #33869b9a);
+  background: var(--siteColor);
 
 
 }

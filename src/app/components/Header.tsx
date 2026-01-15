@@ -76,7 +76,7 @@ export default function Header() {
                 .join(" ")}
         >
             {pathname === "/" && (
-                <div className="w-full bg-[var(--siteColor)] hidden min-[990px]:block rounded-b-[16px]">
+                <div className="w-full bg-[var(--siteColor)] hidden min-[1024px]:block rounded-b-[16px]">
                     <div className="text-white grid grid-cols-2 items-center text-sm max-w-[1400px] mx-auto">
                         <div className="h-full">
                             <div className="h-full max-w-[700px] flex items-center space-x-6 top-header-left relative ml-auto px-6 py-2">

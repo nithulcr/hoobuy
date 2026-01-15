@@ -75,7 +75,7 @@ export default function ContactSection() {
                 </span>
                 <div className="flex flex-col gap-1 text-center">
                   <span className="text-site text-lg">Work with us</span>
-                  <a href="mailto:Info@safeattestuae.com" className="text-1 text-sm font-light">Info@hoobuy.com</a>
+                  <a href="mailto:Info@safeattestuae.com" className="text-1 text-sm font-light">Info@HOOBUYREALTORS.com</a>
                 </div>
               </li>
               <li className="flex items-center flex-col gap-4 bg-white rounded-2xl p-6 lg:p-10">

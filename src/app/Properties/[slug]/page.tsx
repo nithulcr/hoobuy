@@ -138,11 +138,14 @@ export default function PropertyPage({ params }: PageProps) {
                     <h1 className="text-3xl font-semibold">{property.title}</h1>
                     <p className="text-xl text-site font-semibold">{property.price}</p>
                     <p className="text-md text-gray-600 flex gap-2 items-center bg-white w-fit px-3 py-1 rounded-3xl"><MapPin size={16} className={`text-site `} />{property.location}</p>
-                    <p className="text-sm leading-relaxed text-gray-700 ">  {property.description}</p>
+                   <div>
+                    <h3 className="font-medium text-md my-2">Property Details:</h3>
+                     <p className="text-sm leading-relaxed text-gray-700 ">  {property.description}</p>
+                   </div>
                     <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4">
 
-                        <AnimatedButton label="Contact Agent" className="w-fit" />
-                        <AnimatedButton label="Whatsapp Agent" className="w-fit transparent-btn transparent-btn4  whatsapp-btn" />
+                        <AnimatedButton label="Contact Us" className="w-fit" />
+                        <AnimatedButton label="Whatsapp Us" className="w-fit transparent-btn transparent-btn4  whatsapp-btn" />
 
 
                     </div>
@@ -151,8 +154,7 @@ export default function PropertyPage({ params }: PageProps) {
                     <div className="bg-white rounded-2xl p-6 my-3">
                         <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
                             <h3 className="font-semibold text-lg">Address</h3>
-                            <span className="bg-[var(--siteColor)] w-fit px-3 py-1 rounded-3xl text-white text-sm flex items-center gap-1 cursor-pointer"><Map size={16} /> Open on Google Maps</span>
-
+                            
                         </div>
                         <div className="block-content-wrap">
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 list-none">
@@ -189,16 +191,7 @@ export default function PropertyPage({ params }: PageProps) {
                                     </div>
                                 </li>
 
-                                <li className="flex">
-                                    <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong id="zip-label" className="text-sm font-semibold">
-                                            Zip/Postal Code:
-                                        </strong>
-                                        <span aria-labelledby="zip-label" className="text-right text-sm text-gray-700">
-                                            683565
-                                        </span>
-                                    </div>
-                                </li>
+                               
 
                                 <li className="flex">
                                     <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">

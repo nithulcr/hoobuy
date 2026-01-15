@@ -63,6 +63,60 @@ const Property3En = [
         location: "Mattannur, kannur, Kerala",
         status: "Solded",
     },
+    {
+        id: '05',
+              icon: "/property1.jpg",
+
+        title: "Land Solded",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+        listed: "22 Nov 2025",
+        status: "Solded",
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '06',
+               icon: "/Property3.jpg",
+
+        title: "Land Solded",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+        listed: "22 Nov 2025",
+        status: "Solded",
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '07',
+               icon: "/property4.jpg",
+
+        title: "Land Solded",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        price: "₹ 8lakh/cent",
+        listed: "22 Nov 2025",
+        status: "Solded",
+        range: "Premium",
+
+
+        link: "/"
+    },
+    {
+        id: '08',
+               icon: "/property3.jpg",
+
+        title: "Land Solded",
+        land: "land",
+        location: "Mattannur, kannur, Kerala",
+        status: "Solded",
+    },
 
 ];
 
