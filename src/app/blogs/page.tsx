@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import Header from '../components/Header';
+
 import Hero2 from "../components/Hero2";
 
 import Footer from '../components/Footer';
@@ -50,7 +50,7 @@ export default async function BlogListPage() {
 
   return (
     <>
-      <Header />
+     
       <Hero2
         heading_en="Blogs"
         breadcrumbPosition="left"

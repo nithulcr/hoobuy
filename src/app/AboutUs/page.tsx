@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useStaggeredFadeUp } from "../components/useStaggeredFadeUp";
 
 
-import Header from "../components/Header";
 import Hero2 from "../components/Hero2";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -21,7 +20,7 @@ export default function Home() {
   useStaggeredFadeUp(fadeRef as React.RefObject<HTMLElement>);
   return (
     <>
-      <Header />
+     
       <Hero2
         heading_en="About Us"
         breadcrumbPosition="left"

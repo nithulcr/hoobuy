@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Header from '../../components/Header';
+
 import Footer from '../../components/Footer';
 import he from 'he';
 import Link from 'next/link';
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   return (
     <>
-      <Header />
+     
 
       <section className="other-section pt-14 lg:pt-24 pb-1 lg:pb-20 overflow-hidden relative mt-[50px]">
         <div className="max-w-[1200px] px-6 w-full mx-auto relative">

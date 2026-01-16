@@ -50,7 +50,7 @@ export default function HomePageClient() {
       {shouldShowPreloader && <Preloader onComplete={handlePreloaderComplete} />}
       {showContent && (
         <>
-          <Header />
+         
           <Hero />
           <AboutSection />
           <FeaturedProperty />

@@ -1,7 +1,9 @@
+// app/Properties/[slug]/page.tsx
+
 import React from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import Header from "../../components/Header";
+
 import Footer from "../../components/Footer";
 import FeaturedProperty3 from "../../components/FeaturedProperty3";
 import AnimatedButton from "../../components/AnimatedButton";
@@ -9,348 +11,405 @@ import { MapPin } from "lucide-react";
 import PropertySlider from "./PropertySlider";
 
 type WPProperty = {
-    id: number;
-    slug: string;
-    title: { rendered: string };
-    content: { rendered: string };
-    acf?: {
-        badge?: string;
-        price?: string;
-        location?: string;
-        range?: string;
-        property_summary?: string;
-        // now ACF returns image IDs (numbers)
-        image1?: number | null;
-        image2?: number | null;
-        image3?: number | null;
-        image4?: number | null;
-    };
-    _embedded?: {
-        "wp:featuredmedia"?: { source_url: string }[];
-    };
+  id: number;
+  slug: string;
+  title: { rendered: string };
+  content: { rendered: string };
+  acf?: {
+    // main info
+    badge?: string;
+    price?: string;
+    location?: string;
+    range?: string;
+    property_summary?: string;
+
+    // gallery image IDs (ACF Image return = ID)
+    image1?: number | null;
+    image2?: number | null;
+    image3?: number | null;
+    image4?: number | null;
+    image5?: number | null;
+
+    // address block
+    // ACF text fields: address_line, district, state, locality
+    address_line?: string;
+    district?: string;
+    state?: string;
+    locality?: string;
+
+    // details block
+    // ACF text/number fields with these names
+
+    property_size?: string;
+    land_area?: string;
+    bedrooms?: string;
+    bathrooms?: string;
+    parking_spaces?: string;
+    year_built?: string;
+    property_type?: string;
+    property_status?: string;
+
+    // features: ACF Checkbox or Repeater of text (field name: features)
+    features?: string[];
+  };
+  _embedded?: {
+    "wp:featuredmedia"?: { source_url: string }[];
+  };
 };
 
 type PageProps = {
-    // Next 15: params is async
-    params: Promise<{ slug: string }>;
+  // Next 15: params is async
+  params: Promise<{ slug: string }>;
 };
 
 async function getProperty(slug: string): Promise<WPProperty | null> {
-    const base = process.env.NEXT_PUBLIC_WP_API_URL;
-    if (!base) return null;
+  const base = process.env.NEXT_PUBLIC_WP_API_URL;
+  if (!base) return null;
 
-    const res = await fetch(
-        `${base}/property?slug=${encodeURIComponent(slug)}&_embed`,
-        { next: { revalidate: 60 } }
-    );
+  const res = await fetch(
+    `${base}/property?slug=${encodeURIComponent(slug)}&_embed`,
+    { next: { revalidate: 60 } }
+  );
+  if (!res.ok) return null;
 
-    if (!res.ok) return null;
-
-    const data = (await res.json()) as WPProperty[];
-    return data[0] ?? null;
+  const data = (await res.json()) as WPProperty[];
+  return data[0] ?? null;
 }
 
-// helper: given an attachment ID, fetch its URL from WP media endpoint
+// helper: resolve media ID to URL
 async function getMediaUrl(id: number): Promise<string | null> {
-    const base = process.env.NEXT_PUBLIC_WP_API_URL;
-    if (!base) return null;
+  const base = process.env.NEXT_PUBLIC_WP_API_URL;
+  if (!base) return null;
 
-    try {
-        const res = await fetch(`${base}/media/${id}`, {
-            next: { revalidate: 300 },
-        });
-        if (!res.ok) return null;
+  try {
+    const res = await fetch(`${base}/media/${id}`, {
+      next: { revalidate: 300 },
+    });
+    if (!res.ok) return null;
 
-        const media = await res.json();
-        const url: unknown = media?.source_url;
-        return typeof url === "string" ? url : null;
-    } catch {
-        return null;
-    }
+    const media = await res.json();
+    const url: unknown = media?.source_url;
+    return typeof url === "string" ? url : null;
+  } catch {
+    return null;
+  }
 }
 
 export default async function PropertyPage({ params }: PageProps) {
-    // ✅ fix Next 15 params warning
-    const { slug } = await params;
+  const { slug } = await params;
 
-    const wpProperty = await getProperty(slug);
-    if (!wpProperty) return notFound();
+  const wpProperty = await getProperty(slug);
+  if (!wpProperty) return notFound();
 
-    // collect ACF IDs
-    const acfIds = [
-        wpProperty.acf?.image1,
-        wpProperty.acf?.image2,
-        wpProperty.acf?.image3,
-        wpProperty.acf?.image4,
-    ].filter((id): id is number => typeof id === "number");
+  const acf = wpProperty.acf ?? {};
 
-    // turn IDs into URLs via /media/{id}
-    const acfUrls = await Promise.all(acfIds.map((id) => getMediaUrl(id)));
-    const imagesFromAcf = acfUrls.filter(
-        (u): u is string => typeof u === "string" && u.trim() !== ""
-    );
+  // collect gallery image IDs from ACF
+  const acfIds = [
+    acf.image1,
+    acf.image2,
+    acf.image3,
+    acf.image4,
+    acf.image5,
+  ].filter((id): id is number => typeof id === "number");
 
-    const featured =
-        wpProperty._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? null;
+  const acfUrls = await Promise.all(acfIds.map((id) => getMediaUrl(id)));
+  const imagesFromAcf = acfUrls.filter(
+    (u): u is string => typeof u === "string" && u.trim() !== ""
+  );
 
-    const images =
-        imagesFromAcf.length > 0
-            ? imagesFromAcf
-            : featured
-                ? [featured]
-                : ["/fallback-property.jpg"];
+  const featured =
+    wpProperty._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? null;
 
-    const descriptionRaw =
-        wpProperty.acf?.property_summary ?? wpProperty.content.rendered ?? "";
-    const descriptionText = descriptionRaw.replace(/<[^>]+>/g, "");
+  const images =
+    imagesFromAcf.length > 0
+      ? imagesFromAcf
+      : featured
+      ? [featured]
+      : ["/fallback-property.jpg"];
 
-    const property = {
-        title: wpProperty.title.rendered,
-        price: wpProperty.acf?.price ?? "",
-        location: wpProperty.acf?.location ?? "",
-        range: wpProperty.acf?.badge ?? wpProperty.acf?.range ?? "",
-        description: descriptionText,
-        images,
-    };
+  const descriptionRaw =
+    acf.property_summary ?? wpProperty.content.rendered ?? "";
+  const descriptionText = descriptionRaw.replace(/<[^>]+>/g, "");
 
-    // optional debug (will show in server console)
-    console.log("ACF raw JSON:", JSON.stringify(wpProperty.acf, null, 2));
-    console.log("imagesFromAcf:", imagesFromAcf);
-    console.log("final images:", images);
+  const property = {
+    title: wpProperty.title.rendered,
+    price: acf.price ?? "",
+    location: acf.location ?? "",
+    range: acf.badge ?? acf.range ?? "",
+    description: descriptionText,
+    images,
+  };
 
-    return (
-        <div className="property-page">
-            <Header />
+  // address values
+  const addr = {
+    address: acf.address_line ?? "",
+    district: acf.district ?? "",
+    state: acf.state ?? "",
+    locality: acf.locality ?? "",
+  };
 
-            <main className="pb-14 lg:pb-24 mx-auto px-1 lg:px-6 max-w-[1400px] py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[80px]">
-                {/* LEFT: slider */}
-                <PropertySlider images={property.images} title={property.title} />
+  // details values
+  const details = {
 
-                {/* RIGHT: details */}
-                <div className="property-info flex-1 flex flex-col gap-3">
-                    <div className="mt-2">
-                        <span className="flex gap-2 items-center w-fit rounded-full bg-amber-500 text-white text-xs px-3 py-1">
-                            <Image src="/crown.png" alt="Premium" width={14} height={14} />
-                            {property.range}
-                        </span>
-                    </div>
+    size: acf.property_size ?? "",
+    landArea: acf.land_area ?? "",
+    bedrooms: acf.bedrooms ?? "",
+    bathrooms: acf.bathrooms ?? "",
+    parking: acf.parking_spaces ?? "",
+    yearBuilt: acf.year_built ?? "",
+    type: acf.property_type ?? "",
+    status: acf.property_status ?? "",
+  };
 
-                    <h1 className="text-3xl font-semibold">{property.title}</h1>
-                    <p className="text-xl text-site font-semibold">{property.price}</p>
-                    <p className="text-md text-gray-600 flex gap-2 items-center bg-white w-fit px-3 py-1 rounded-3xl">
-                        <MapPin size={16} className="text-site" />
-                        {property.location}
-                    </p>
+  const featureList =
+    Array.isArray(acf.features) && acf.features.length > 0
+      ? acf.features
+      : [];
 
-                    <div>
-                        <h3 className="font-medium text-md my-2">Property Details:</h3>
-                        <p className="text-sm leading-relaxed text-gray-700">
-                            {property.description}
-                        </p>
-                    </div>
+  // optional debug
+  console.log("ACF raw JSON:", JSON.stringify(acf, null, 2));
+  console.log("imagesFromAcf:", imagesFromAcf);
+  console.log("final images:", images);
 
-                    <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4">
-                        <AnimatedButton label="Contact Us" className="w-fit" />
-                        <AnimatedButton
-                            label="Whatsapp Us"
-                            className="w-fit transparent-btn transparent-btn4 whatsapp-btn"
-                        />
-                    </div>
+  return (
+    <div className="property-page">
 
-                    {/* Address */}
-                    <div className="bg-white rounded-2xl p-6 my-3">
-                        <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
-                            <h3 className="font-semibold text-lg">Address</h3>
-                        </div>
-                        <div className="block-content-wrap">
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 list-none">
-                                <li className="flex">
-                                    <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong
-                                            id="address-label"
-                                            className="text-sm font-semibold"
-                                        >
-                                            Address:
-                                        </strong>
-                                        <span
-                                            aria-labelledby="address-label"
-                                            className="text-right text-sm text-gray-700"
-                                        >
-                                            Behind infopark phase 2, Kakkanad
-                                        </span>
-                                    </div>
-                                </li>
 
-                                <li className="flex">
-                                    <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong id="city-label" className="text-sm font-semibold">
-                                            District:
-                                        </strong>
-                                        <span
-                                            aria-labelledby="city-label"
-                                            className="text-right text-sm text-gray-700"
-                                        >
-                                            Ernakulam
-                                        </span>
-                                    </div>
-                                </li>
+      <main className="pb-14 lg:pb-24 mx-auto px-1 lg:px-6 max-w-[1400px] py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[80px]">
+        {/* LEFT: slider */}
+        <PropertySlider images={property.images} title={property.title} />
 
-                                <li className="flex">
-                                    <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong id="state-label" className="text-sm font-semibold">
-                                            State/county:
-                                        </strong>
-                                        <span
-                                            aria-labelledby="state-label"
-                                            className="text-right text-sm text-gray-700"
-                                        >
-                                            Kerala
-                                        </span>
-                                    </div>
-                                </li>
+        {/* RIGHT: details */}
+        <div className="property-info flex-1 flex flex-col gap-3">
+          <div className="mt-2">
+            <span className="flex gap-2 items-center w-fit rounded-full bg-amber-500 text-white text-xs px-3 py-1">
+              <Image src="/crown.png" alt="Premium" width={14} height={14} />
+              {property.range}
+            </span>
+          </div>
 
-                                <li className="flex">
-                                    <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong id="area-label" className="text-sm font-semibold">
-                                            Locality:
-                                        </strong>
-                                        <span
-                                            aria-labelledby="area-label"
-                                            className="text-right text-sm text-gray-700"
-                                        >
-                                            Ernakulam, Kakkanad, Kochi
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+          <h1 className="text-3xl font-semibold">{property.title}</h1>
+          <p className="text-2xl text-site font-semibold">
+            {property.price ? `₹${property.price}` : ""}
+          </p>
+          <p className="text-md text-gray-600 flex gap-2 items-center bg-white w-fit pl-3 pr-4 py-1 rounded-3xl">
+            <MapPin size={16} className="text-site" />
+            {property.location}
+          </p>
 
-                    {/* Details */}
-                    <div className="bg-white rounded-2xl p-6 my-3">
-                        <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
-                            <h3 className="font-semibold text-lg">Details</h3>
-                        </div>
-                        <div className="detail-wrap">
-                            <ul
-                                className="grid grid-cols-1 md:grid-cols-2 gap-x-6 list-none"
-                                role="list"
-                            >
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">Price</strong>
-                                        <span className="text-sm text-gray-800">
-                                            ₹1,15,00,000
-                                        </span>
-                                    </div>
-                                </li>
+          <div>
+            <h3 className="font-medium text-md my-2">Description:</h3>
+            <p className="text-sm leading-relaxed text-gray-700">
+              {property.description}
+            </p>
+          </div>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Property Size
-                                        </strong>
-                                        <span className="text-sm text-gray-800">1886 sqft</span>
-                                    </div>
-                                </li>
+          <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4">
+            <AnimatedButton label="Contact Us" className="w-fit" />
+            <AnimatedButton
+              label="Whatsapp Us"
+              className="w-fit transparent-btn transparent-btn4 whatsapp-btn"
+            />
+          </div>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Land Area
-                                        </strong>
-                                        <span className="text-sm text-gray-800">4 Cent</span>
-                                    </div>
-                                </li>
+          {/* Address */}
+          <div className="bg-white rounded-2xl p-6 my-3">
+            <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
+              <h3 className="font-semibold text-lg">Address</h3>
+            </div>
+            <div className="block-content-wrap">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 list-none">
+                <li className="flex">
+                  <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong
+                      id="address-label"
+                      className="text-sm font-semibold"
+                    >
+                      Address:
+                    </strong>
+                    <span
+                      aria-labelledby="address-label"
+                      className="text-right text-sm text-gray-700"
+                    >
+                      {addr.address}
+                    </span>
+                  </div>
+                </li>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Bedrooms
-                                        </strong>
-                                        <span className="text-sm text-gray-800">3</span>
-                                    </div>
-                                </li>
+                <li className="flex">
+                  <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong id="city-label" className="text-sm font-semibold">
+                      District:
+                    </strong>
+                    <span
+                      aria-labelledby="city-label"
+                      className="text-right text-sm text-gray-700"
+                    >
+                      {addr.district}
+                    </span>
+                  </div>
+                </li>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Bathrooms
-                                        </strong>
-                                        <span className="text-sm text-gray-800">3</span>
-                                    </div>
-                                </li>
+                <li className="flex">
+                  <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong id="state-label" className="text-sm font-semibold">
+                      State/county:
+                    </strong>
+                    <span
+                      aria-labelledby="state-label"
+                      className="text-right text-sm text-gray-700"
+                    >
+                      {addr.state}
+                    </span>
+                  </div>
+                </li>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Parking Spaces
-                                        </strong>
-                                        <span className="text-sm text-gray-800">2</span>
-                                    </div>
-                                </li>
+                <li className="flex">
+                  <div className="list-lined-item w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong id="area-label" className="text-sm font-semibold">
+                      Locality:
+                    </strong>
+                    <span
+                      aria-labelledby="area-label"
+                      className="text-right text-sm text-gray-700"
+                    >
+                      {addr.locality}
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Year Built
-                                        </strong>
-                                        <span className="text-sm text-gray-800">2025</span>
-                                    </div>
-                                </li>
+          {/* Details */}
+          <div className="bg-white rounded-2xl p-6 my-3">
+            <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
+              <h3 className="font-semibold text-lg">Details</h3>
+            </div>
+            <div className="detail-wrap">
+              <ul
+                className="grid grid-cols-1 md:grid-cols-2 gap-x-6 list-none"
+                role="list"
+              >
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">Price</strong>
+                    <span className="text-sm text-gray-800">
+                     {property.price ? `₹${property.price}` : ""}
+                    </span>
+                  </div>
+                </li>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Property Type
-                                        </strong>
-                                        <span className="text-sm text-gray-800">
-                                            House, Single Family Home, Villa
-                                        </span>
-                                    </div>
-                                </li>
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Property Size
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.size}
+                    </span>
+                  </div>
+                </li>
 
-                                <li className="flex">
-                                    <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
-                                        <strong className="text-sm font-semibold">
-                                            Property Status
-                                        </strong>
-                                        <span className="text-sm text-gray-800">For Sale</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Land Area
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.landArea}
+                    </span>
+                  </div>
+                </li>
 
-                    {/* Features */}
-                    <div className="bg-white rounded-2xl p-6 my-3">
-                        <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
-                            <h3 className="font-semibold text-lg">Features</h3>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mt-4">
-                            {[
-                                "Balcony",
-                                "Calm and Quiet area",
-                                "Car porch",
-                                "Compound wall",
-                                "Dining room",
-                                "Drawing room",
-                                "Electricity connection",
-                            ].map((feat) => (
-                                <div
-                                    key={feat}
-                                    className="rounded-4xl text-white relative bg-[var(--siteColor)]"
-                                >
-                                    <h3 className="text-[12px] py-1 px-3 font-light">{feat}</h3>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">Bedrooms</strong>
+                    <span className="text-sm text-gray-800">
+                      {details.bedrooms}
+                    </span>
+                  </div>
+                </li>
+
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">Bathrooms</strong>
+                    <span className="text-sm text-gray-800">
+                      {details.bathrooms}
+                    </span>
+                  </div>
+                </li>
+
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Parking Spaces
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.parking}
+                    </span>
+                  </div>
+                </li>
+
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Year Built
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.yearBuilt}
+                    </span>
+                  </div>
+                </li>
+
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Property Type
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.type}
+                    </span>
+                  </div>
+                </li>
+
+                <li className="flex">
+                  <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
+                    <strong className="text-sm font-semibold">
+                      Property Status
+                    </strong>
+                    <span className="text-sm text-gray-800">
+                      {details.status}
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Features */}
+          <div className="bg-white rounded-2xl p-6 my-3">
+            <div className="flex items-center gap-2 justify-between mb-2 border-b border-gray-200 pb-3">
+              <h3 className="font-semibold text-lg">Features</h3>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {featureList.map((feat) => (
+                <div
+                  key={feat}
+                  className="rounded-4xl text-white relative bg-[var(--siteColor)]"
+                >
+                  <h3 className="text-[12px] py-1 px-3 font-light">
+                    {feat}
+                  </h3>
                 </div>
-            </main>
-
-            <FeaturedProperty3 />
-            <Footer />
+              ))}
+            </div>
+          </div>
         </div>
-    );
+      </main>
+
+      <FeaturedProperty3 />
+      <Footer />
+    </div>
+  );
 }

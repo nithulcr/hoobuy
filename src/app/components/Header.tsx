@@ -1,37 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import AnimatedButton from "./AnimatedButton";
+import type { PropertyTypeTerm } from "../../lib/getPropertyTypes";
 
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/AboutUs", label: "About us" },
-  {
-    label: "Properties",
-    href: "#",
-    submenu: [
-      { href: "", label: "Residential" },
-      { href: "", label: "Commercial" },
-      { href: "", label: "Agricultural / Farmland" },
-      { href: "", label: "Industrial" },
-      { href: "", label: "Mixed- Others" },
-      { href: "/Properties", label: "All Properties" },
-    ],
-  },
-  { href: "/blogs", label: "Blogs" },
-  { href: "/ContactUs", label: "Contact Us" },
-];
 
-export default function Header() {
+type HeaderProps = {
+  propertyTypes?: PropertyTypeTerm[]; // optional
+};
+
+export default function Header({ propertyTypes = [] }: HeaderProps) {
+  console.log("Header propertyTypes:", propertyTypes);
   const [open, setOpen] = useState(false);
   const [animation, setAnimation] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<{ [key: string]: boolean }>({});
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleMenuToggle = () => {
     if (open) {
@@ -45,6 +35,28 @@ export default function Header() {
       setAnimation("animate-menuSlideDown");
     }
   };
+
+  const closeMenu = () => {
+    setOpenDropdowns({});
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -61,6 +73,26 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/AboutUs", label: "About us" },
+    {
+      label: "Properties",
+      href: "#",
+      submenu: [
+        { href: "/Properties", label: "All Properties" },
+        ...propertyTypes.map((term) => ({
+          href: `/Properties?type=${encodeURIComponent(term.slug)}`,
+          label: term.name,
+        })),
+      ],
+
+    },
+    { href: "/blogs", label: "Blogs" },
+    { href: "/ContactUs", label: "Contact Us" },
+  ];
+  // ------------------------------------------------------------------
 
   return (
     <header
@@ -155,6 +187,7 @@ export default function Header() {
         }
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between md:px-6 px-3 h-[80px] main-header z-10 relative">
+          {/* Logo */}
           <div className="text-2xl font-bold h-full align-content-center flex">
             <Link href="/" className="items-center flex">
               <img
@@ -175,6 +208,7 @@ export default function Header() {
                   <div
                     key={`${item.label}-${item.href}`}
                     className="relative h-full flex items-center"
+                    ref={dropdownRef}
                   >
                     <button
                       type="button"
@@ -207,10 +241,13 @@ export default function Header() {
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${pathname === subItem.href
+                              onClick={closeMenu}
+                              className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${
+                                subItem.href ===
+                                `${pathname}?type=${searchParams.get("type")}`
                                   ? "megamenu-active-tab"
                                   : ""
-                                }`}
+                              }`}
                             >
                               {subItem.label}
                             </Link>
@@ -235,7 +272,11 @@ export default function Header() {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-3">
-            <AnimatedButton href="https://wa.me/12345678" label="Let's Chat" className="w-fit" />
+            <AnimatedButton
+              href="https://wa.me/12345678"
+              label="Let's Chat"
+              className="w-fit"
+            />
             <button onClick={handleMenuToggle} className="lg:hidden text-black">
               {open ? <X size={28} strokeWidth={1} /> : <Menu size={28} strokeWidth={1} />}
             </button>
@@ -277,8 +318,14 @@ export default function Header() {
                       <Link
                         key={subItem.label}
                         href={subItem.href}
-                        className={`block p-2 rounded-lg ${pathname === subItem.href ? "megamenu-active-tab" : ""
-                          }`}
+                        onClick={closeMenu}
+                        className={`block p-2 rounded-lg ${
+                          pathname === subItem.href &&
+                          searchParams.get("type") ===
+                            new URLSearchParams(subItem.href.split("?")[1]).get("type")
+                            ? "megamenu-active-tab"
+                            : ""
+                        }`}
                       >
                         {subItem.label}
                       </Link>
@@ -290,7 +337,10 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block hover:text-[var(--siteColor)] p-2 rounded-lg ${pathname === item.href ? "text-[var(--siteColor)] megamenu-active-tab" : ""
+                onClick={closeMenu}
+                className={`block hover:text-[var(--siteColor)] p-2 rounded-lg ${pathname === item.href
+                  ? "text-[var(--siteColor)] megamenu-active-tab"
+                  : ""
                   }`}
               >
                 {item.label}
