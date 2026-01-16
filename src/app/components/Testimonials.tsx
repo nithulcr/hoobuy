@@ -161,7 +161,7 @@ export default function Testimonials() {
 
                                        
                                         <div className="flex items-center">
-                                            <img
+                                            <Image
                                                 src={item.avatar}
                                                 alt={item.name}
                                                 width={40}

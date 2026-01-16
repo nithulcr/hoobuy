@@ -1,5 +1,6 @@
 // components/Footer.jsx
 import AnimatedButton from "./AnimatedButton";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 justify-between gap-8">
           {/* Logo */}
           <div className="flex flex-col">
-            <img src="/logo-white.png" alt="Logo" width={200} height={80} className="w-[200px] mb-4" />
+            <Image src="/logo-white.png" alt="Logo" width={200} height={80} className="w-[200px] mb-4" />
 
             <p className="font-normal text-[15px]">Felis consquat magnis fames sagittis ultrices plasodales porttitor quisque ultrice tempor turpis.</p>
             <div className="flex flex-row gap-4 mt-4">

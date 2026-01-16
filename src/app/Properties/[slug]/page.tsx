@@ -29,6 +29,8 @@ type WPProperty = {
     image3?: number | null;
     image4?: number | null;
     image5?: number | null;
+    image6?: number | null;
+
 
     // address block
     address_line?: string;
@@ -106,6 +108,8 @@ export default async function PropertyPage({ params }: PageProps) {
     acf.image3,
     acf.image4,
     acf.image5,
+    acf.image6,
+
   ].filter((id): id is number => typeof id === "number");
 
   const acfUrls = await Promise.all(acfIds.map((id) => getMediaUrl(id)));

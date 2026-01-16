@@ -16,7 +16,7 @@ const Hero = () => {
 
     return (
         <>
-            <section className="hero-section  bottom-shape overflow-hidden relative w-full md:min-h-[calc(100vh-150px)] rounded-[16px] flex flex-col justify-center items-center relative mt-[75px] lg:mt-[85px] lg:mt-[116px] ">
+            <section className="hero-section  bottom-shape overflow-hidden relative w-full min-h-[calc(100vh-100px)] md:min-h-[calc(100vh-150px)] rounded-[16px] flex flex-col justify-center items-center relative mt-[75px] lg:mt-[85px] lg:mt-[116px] ">
                 <div className="w-full flex flex-col flex-col-reverse lg:grid lg:grid-cols-5">
                     <div className="py-6 lg:py-10 flex items-center lg:justify-end lg:col-span-2 px-6 lg:pl-[60px] pb-14 lg:pb-[70px] pt-14 lg:pt-[70px]">
                         <motion.div initial={{ opacity: 0, y: 20 }}
@@ -35,8 +35,8 @@ const Hero = () => {
 
                             <div className="mt-4 lg:mt-5 flex items-center flex-wrap gap-2 lg:gap-4">
 
-                                <AnimatedButton label="Buy a Property" className="w-fit transparent-btn5" />
-                                <AnimatedButton label="Sell a Property" className="w-fit transparent-btn transparent-btn4" />
+                                <AnimatedButton href="/Properties" label="Buy a Property" className="w-fit transparent-btn5" />
+                                <AnimatedButton href="tel:7293335555" label="Sell a Property" className="w-fit transparent-btn transparent-btn4" />
 
 
                             </div>
@@ -46,7 +46,7 @@ const Hero = () => {
                     </div>
                     <motion.div initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }} className="relative z-10 lg:col-span-3">
+                        transition={{ duration: 0.5 }} className="relative z-10 lg:col-span-3 hidden md:block">
 
                         {/* <ContactForm /> */}
                         <Image

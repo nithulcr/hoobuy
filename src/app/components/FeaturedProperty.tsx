@@ -20,7 +20,7 @@ export default function FeaturedProperty({ properties }: { properties: Property[
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.5 }}
-                    className="heading flex flex-col md:flex-row md:items-center justify-between mb-10"
+                    className="heading flex flex-col md:flex-row md:items-center justify-between mb-4 lg:mb-10"
                 >
                     <div className="max-w-[400px]">
                         <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
@@ -31,7 +31,9 @@ export default function FeaturedProperty({ properties }: { properties: Property[
                             Best Properties For Sale in Kerala
                         </h2>
                     </div>
+                    <div className="hidden lg:block">
                     <AnimatedButton href="/Properties" label="View More" className="mt-6 w-fit" />
+                    </div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
@@ -63,12 +65,12 @@ export default function FeaturedProperty({ properties }: { properties: Property[
                             </span>
 
                             <div className="p-3">
-                                <div className="flex gap-4 items-center mb-2">
+                                <div className="flex gap-4 items-center mb-1 lg:mb-2" >
                                     <h3 className="text-[18px] font-semibold">{property.title}</h3>
                                 </div>
                                 <p className="text-sm leading-snug text-1 font-light">{property.land}</p>
                                 <p className="text-sm leading-snug text-1 py-1 font-light">{property.location}</p>
-                                <div className="text-sm mt-2">
+                                <div className="text-sm lg:mt-2">
                                     <div className="flex gap-3">
                                         <span>Price:</span>
                                         <span className="text-site text-sm">{property.price}</span>
@@ -87,6 +89,9 @@ export default function FeaturedProperty({ properties }: { properties: Property[
                             </div>
                         </Link>
                     ))}
+                </div>
+                <div className="lg:hidden">
+                    <AnimatedButton href="/Properties" label="View More" className="mt-6 w-fit  mx-auto" />
                 </div>
             </div>
         </section>

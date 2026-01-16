@@ -140,10 +140,10 @@ height:100%;
 .bg-nav-cover .main-header {
   height: 70px;
 }
-.page-blogs-slug, .page-Properties-slug {
-  header .second-header{
-  background: white;
-}
+.page--blogs-slug, .page--Properties-slug {
+  .second-header{
+      background: white;
+  }
 }
 .menu-item {
   color: black;
@@ -553,11 +553,18 @@ h1 span{
 .megamenu-active-tab {
     background: var(--background);
 }
+.hero-section{
+  background: url(/about.jpg); 
+  background-position:right bottom;
+  background-size: cover;
+}
 .hero-section::before {
 
-  background: var(--siteColor);
+  background: rgb(0 71 89 / 78%);
 
 
 }
 
 }
+
+

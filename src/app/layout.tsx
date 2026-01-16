@@ -36,22 +36,22 @@ export default async function RootLayout({
       path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
 
     if (normalizedPath === "" || normalizedPath === "/") {
-      return "page--home";
+      return "page-home";
     }
 
     const pathParts = normalizedPath.substring(1).split("/");
     const folderName = pathParts[0];
 
     if (!folderName) {
-      return "page--unknown";
+      return "page-unknown";
     }
 
     if (pathParts.length > 1) {
       // This is a slug page.
-      return `page--${folderName}-slug`;
+      return `page-${folderName}-slug`;
     } else {
       // This is a top-level page or a folder index.
-      return `page--${folderName}`;
+      return `page-${folderName}`;
     }
   };
 

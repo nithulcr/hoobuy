@@ -133,7 +133,7 @@ export default function Property3() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }} className="heading flex flex-col md:flex-row   md:items-center justify-between mb-10">
+                    transition={{ duration: 0.5 }} className="heading flex flex-col md:flex-row   md:items-center justify-between mb-4 lg:mb-10">
                     <div className="max-w-[400px]">
                         <div className="flex items-center gap-2 text-site mb-3 uppercase text-xs lg:text-sm">
                             <Image src="/favicon.png" alt="Logo" width={30} height={30} className="object-contain" />
@@ -143,7 +143,7 @@ export default function Property3() {
                             Best Solded Properties  in Kerala
                         </h2>
                     </div>
-                    <AnimatedButton label="View More" className="mt-6 w-fit" />
+                    {/* <AnimatedButton label="View More" className="mt-6 w-fit" /> */}
                 </motion.div>
 
                 <div

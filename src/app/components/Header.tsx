@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -22,6 +23,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const handleMenuToggle = () => {
     if (open) {
@@ -43,8 +45,16 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        closeMenu();
+      if (
+        open &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        // Also check if the click is on the menu toggle button
+        const target = event.target as HTMLElement;
+        if (!target.closest('button') || !target.closest('button')?.isSameNode(document.querySelector('.lg\\:hidden'))) {
+          closeMenu();
+        }
       }
     };
 
@@ -52,11 +62,11 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [open]);
 
-  useEffect(() => {
-    closeMenu();
-  }, [pathname]);
+  
+
+  
 
   useEffect(() => {
     if (pathname === "/") {
@@ -73,6 +83,11 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    closeMenu();
+  }, [pathname, searchParams]);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -190,7 +205,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
           {/* Logo */}
           <div className="text-2xl font-bold h-full align-content-center flex">
             <Link href="/" className="items-center flex">
-              <img
+              <Image
                 src="/logo.png"
                 alt="Logo"
                 width={160}
@@ -241,7 +256,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              onClick={closeMenu}
+                              onClick={() => setOpenDropdowns({})}
                               className={`block py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md px-4 ${
                                 subItem.href ===
                                 `${pathname}?type=${searchParams.get("type")}`
@@ -287,6 +302,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
       {/* Mobile menu */}
       {open && (
         <motion.div
+          ref={mobileMenuRef}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

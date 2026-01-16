@@ -12,7 +12,7 @@ export async function getPropertyTypes(): Promise<PropertyTypeTerm[]> {
     return [];
   }
 
-  const res = await fetch(`${base}/property-type?per_page=100`, {
+  const res = await fetch(`${base}/property-type?per_page=100&orderby=id&order=asc`, {
     cache: "no-store",
   });
 
