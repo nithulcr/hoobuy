@@ -1,13 +1,12 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css";
-import Script from "next/script";
-
+import { headers } from "next/headers";
 import { Toaster } from "react-hot-toast";
-import SmoothScrollWrapper from "./SmoothScrollWrapper";
 
-import Header from "./components/Header";
 import { getPropertyTypes } from "../lib/getPropertyTypes";
+import Header from "./components/Header";
+import SmoothScrollWrapper from "./SmoothScrollWrapper";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "HooBuy",
@@ -27,7 +26,36 @@ export default async function RootLayout({
 }) {
   const propertyTypes = await getPropertyTypes();
 
-  console.log("RootLayout propertyTypes length:", propertyTypes.length);
+  const heads = await headers();
+  const pathname = heads.get("x-pathname") || "";
+
+
+
+  const generateBodyClass = (path: string) => {
+    const normalizedPath =
+      path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+
+    if (normalizedPath === "" || normalizedPath === "/") {
+      return "page--home";
+    }
+
+    const pathParts = normalizedPath.substring(1).split("/");
+    const folderName = pathParts[0];
+
+    if (!folderName) {
+      return "page--unknown";
+    }
+
+    if (pathParts.length > 1) {
+      // This is a slug page.
+      return `page--${folderName}-slug`;
+    } else {
+      // This is a top-level page or a folder index.
+      return `page--${folderName}`;
+    }
+  };
+
+  const bodyClass = generateBodyClass(pathname);
 
   return (
     <html lang="en" dir="ltr">
@@ -37,7 +65,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased mx-2 md:mx-5">
+      <body className={`antialiased mx-2 md:mx-5 ${bodyClass}`}>
         {/* Render Header only here, always with propertyTypes */}
         <Header propertyTypes={propertyTypes} />
 

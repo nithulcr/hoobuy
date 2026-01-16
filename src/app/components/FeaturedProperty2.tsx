@@ -146,11 +146,8 @@ export default function Property3() {
                     <AnimatedButton label="View More" className="mt-6 w-fit" />
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.5 }}
+                <div
+                    
                     className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  relative  ">
                     {Property3.map((Property3) => (
                         <div
@@ -183,7 +180,7 @@ export default function Property3() {
 
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section >
     );

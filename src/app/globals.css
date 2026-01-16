@@ -140,8 +140,10 @@ height:100%;
 .bg-nav-cover .main-header {
   height: 70px;
 }
-.property-page header .second-header{
+.page-blogs-slug, .page-Properties-slug {
+  header .second-header{
   background: white;
+}
 }
 .menu-item {
   color: black;

@@ -13,7 +13,7 @@ export default function Footer() {
              Unlock Your Perfect Property Package
             </h2>
           </div>
-          <AnimatedButton type="submit"
+          <AnimatedButton href="tel:7293335555" type="submit"
             label="Let's Talk" className="w-fit" />
         </div>
         <div className="grid lg:grid-cols-4 justify-between gap-8">
@@ -166,7 +166,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col">
                   <span className="opacity-60 text-[12px] font-light">Call Us 24/7</span>
-                  <span className="">+91 999 99 99999</span>
+                  <span className="">+91 72933 35555</span>
                 </div>
               </li>
               <li className="flex items-center gap-4 text-[15px]">
@@ -179,7 +179,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col">
                   <span className="opacity-60 text-[12px] font-light">Work with us</span>
-                  <a href="mailto:Info@safeattestuae.com"  className="">Info@HooBuy.com</a>
+                  <a href="mailto:Info@safeattestuae.com"  className="">hoobuyrealtors@gmail.com</a>
                 </div>
               </li>
               <li className="flex gap-4 text-[15px]">
@@ -192,7 +192,7 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col">
                   <span className="opacity-60 text-[12px] font-light">Our Location</span>
-                  <span className="">Kannur, Kerala</span>
+                  <span className="">Chalode, Kannur, Kerala</span>
                 </div>
               </li>
             </ul>

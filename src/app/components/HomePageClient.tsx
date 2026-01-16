@@ -22,8 +22,9 @@ import Process from "./Process";
 
 
 import Footer from "./Footer";
+import { Property } from "../../lib/getProperties"; // Import Property interface
 
-export default function HomePageClient() {
+export default function HomePageClient({ properties }: { properties: Property[] }) {
   const [showContent, setShowContent] = useState(false);
   const [shouldShowPreloader, setShouldShowPreloader] = useState(true);
 
@@ -53,7 +54,7 @@ export default function HomePageClient() {
          
           <Hero />
           <AboutSection />
-          <FeaturedProperty />
+          <FeaturedProperty properties={properties} />
           <ProjectScroller />
           <FeaturedProperty2 />
           <Features />

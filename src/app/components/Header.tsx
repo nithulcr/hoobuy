@@ -110,7 +110,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
             <div className="h-full">
               <div className="h-full max-w-[700px] flex items-center space-x-6 top-header-left relative ml-auto px-6 py-2">
                 <p className="font-light">Time to Unlock Your Perfect Property?</p>
-                <a href="#" className="flex items-center space-x-2 font-bold pr-5">
+                <a href="tel:7293335555" className="flex items-center space-x-2 font-bold pr-5">
                   Contact Us
                   <svg
                     className="ml-2"
@@ -273,7 +273,7 @@ export default function Header({ propertyTypes = [] }: HeaderProps) {
           {/* Right side buttons */}
           <div className="flex items-center gap-3">
             <AnimatedButton
-              href="https://wa.me/12345678"
+              href="https://wa.me/7293335555"
               label="Let's Chat"
               className="w-fit"
             />

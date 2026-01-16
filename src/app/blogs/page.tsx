@@ -67,7 +67,7 @@ export default async function BlogListPage() {
                 console.warn(`Featured image not found for post: "${post.title.rendered}"`);
               }
               return (
-                <div key={post.id} className="rounded-lg bg-white">
+                <Link href={`/blogs/${post.slug}`}  key={post.id} className="rounded-lg bg-white">
                   <Image 
                     src={featuredImage || '/blog1.png'}
                     alt="blog img"
@@ -80,16 +80,16 @@ export default async function BlogListPage() {
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <h2 className="text-2xl font-semibold my-3 line-clamp-3">
-                      <Link href={`/blogs/${post.slug}`}>{post.title.rendered}</Link>
+                      {post.title.rendered}
                     </h2>
                     <div
                       className="text-[#404040] font-normal line-clamp-5"
                       dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                     />
-                    <AnimatedButton href={`/blogs/${post.slug}`} label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
+                    <AnimatedButton  label="Read More" className="w-fit transparent-btn2 transparent-btn3 mt-6" />
                     
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>

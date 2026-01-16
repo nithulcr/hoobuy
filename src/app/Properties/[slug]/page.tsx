@@ -31,15 +31,12 @@ type WPProperty = {
     image5?: number | null;
 
     // address block
-    // ACF text fields: address_line, district, state, locality
     address_line?: string;
     district?: string;
     state?: string;
     locality?: string;
 
     // details block
-    // ACF text/number fields with these names
-
     property_size?: string;
     land_area?: string;
     bedrooms?: string;
@@ -49,7 +46,7 @@ type WPProperty = {
     property_type?: string;
     property_status?: string;
 
-    // features: ACF Checkbox or Repeater of text (field name: features)
+    // features
     features?: string[];
   };
   _embedded?: {
@@ -58,7 +55,6 @@ type WPProperty = {
 };
 
 type PageProps = {
-  // Next 15: params is async
   params: Promise<{ slug: string }>;
 };
 
@@ -150,7 +146,6 @@ export default async function PropertyPage({ params }: PageProps) {
 
   // details values
   const details = {
-
     size: acf.property_size ?? "",
     landArea: acf.land_area ?? "",
     bedrooms: acf.bedrooms ?? "",
@@ -166,6 +161,10 @@ export default async function PropertyPage({ params }: PageProps) {
       ? acf.features
       : [];
 
+  // Build WhatsApp message using title and slug
+  const whatsappMessage = `I'm interested in this property: ${property.title}. You can view the property here: https://hoobuy-realestate.vercel.app//Properties/${slug}`;
+  const encodedWhatsAppMessage = encodeURIComponent(whatsappMessage);
+
   // optional debug
   console.log("ACF raw JSON:", JSON.stringify(acf, null, 2));
   console.log("imagesFromAcf:", imagesFromAcf);
@@ -173,8 +172,6 @@ export default async function PropertyPage({ params }: PageProps) {
 
   return (
     <div className="property-page">
-
-
       <main className="pb-14 lg:pb-24 mx-auto px-1 lg:px-6 max-w-[1400px] py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[80px]">
         {/* LEFT: slider */}
         <PropertySlider images={property.images} title={property.title} />
@@ -205,8 +202,9 @@ export default async function PropertyPage({ params }: PageProps) {
           </div>
 
           <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4">
-            <AnimatedButton label="Contact Us" className="w-fit" />
+            <AnimatedButton href="tel:7293335555" label="Contact Us" className="w-fit" />
             <AnimatedButton
+              href={`https://wa.me/7293335555?text=${encodedWhatsAppMessage}`}
               label="Whatsapp Us"
               className="w-fit transparent-btn transparent-btn4 whatsapp-btn"
             />
@@ -295,7 +293,7 @@ export default async function PropertyPage({ params }: PageProps) {
                   <div className="w-full flex justify-between py-2 border-b border-gray-200 gap-2">
                     <strong className="text-sm font-semibold">Price</strong>
                     <span className="text-sm text-gray-800">
-                     {property.price ? `₹${property.price}` : ""}
+                      {property.price ? `₹${property.price}` : ""}
                     </span>
                   </div>
                 </li>
@@ -398,9 +396,7 @@ export default async function PropertyPage({ params }: PageProps) {
                   key={feat}
                   className="rounded-4xl text-white relative bg-[var(--siteColor)]"
                 >
-                  <h3 className="text-[12px] py-1 px-3 font-light">
-                    {feat}
-                  </h3>
+                  <h3 className="text-[12px] py-1 px-3 font-light">{feat}</h3>
                 </div>
               ))}
             </div>

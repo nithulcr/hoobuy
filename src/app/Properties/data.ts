@@ -1,5 +1,12 @@
 import { PropertyItem } from "../components/Property";
 
+type WPTerm = {
+  taxonomy: string;
+  name: string;
+  slug: string;
+  // Add other properties if needed
+};
+
 type WPProperty = {
   id: number;
   slug: string;
@@ -20,7 +27,7 @@ type WPProperty = {
   };
   _embedded?: {
     "wp:featuredmedia"?: { source_url: string }[];
-    "wp:term"?: any[][];
+    "wp:term"?: WPTerm[][];
   };
 };
 
@@ -50,7 +57,7 @@ export async function getProperties(): Promise<PropertyItem[]> {
 
     const termGroups = p._embedded?.["wp:term"] ?? [];
     termGroups.forEach((group) => {
-      group.forEach((term: any) => {
+      group.forEach((term: WPTerm) => {
         if (term?.taxonomy === "property-type") {
           if (typeof term.name === "string") typeNames.push(term.name);
           if (typeof term.slug === "string") typeSlugs.push(term.slug);

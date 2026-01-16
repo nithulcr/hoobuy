@@ -1,5 +1,6 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import HomePageClient from './components/HomePageClient';
+import { getLatestProperties } from '../lib/getProperties';
 
 
 export async function generateMetadata(
@@ -15,6 +16,7 @@ export async function generateMetadata(
   return metadata;
 }
 
-export default function HomePage() {
-  return <HomePageClient />;
+export default async function HomePage() {
+  const properties = await getLatestProperties();
+  return <HomePageClient properties={properties} />;
 }

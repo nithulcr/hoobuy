@@ -127,7 +127,7 @@ const Services = () => {
                     </motion.div>
                   </div>
 
-                  <AnimatedButton label="Buy a Property" className="mt-6 w-fit" />
+                  <AnimatedButton href="/AboutUs" label="More About Us" className="mt-6 w-fit" />
                 </div>
 
                 {service.reverse && (
