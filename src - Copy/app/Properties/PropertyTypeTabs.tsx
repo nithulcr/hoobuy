@@ -15,7 +15,7 @@ export default function PropertyTypeTabs({
 }: PropertyTypeTabsProps) {
   return (
     <section className="property_types py-6 lg:py-10">
-      <div className="max-w-[1400px] mx-auto  flex flex-wrap gap-2">
+      <div className="max-w-[1400px] mx-auto lg:px-6 flex flex-wrap gap-2">
         <button
           type="button"
           onClick={() => onSelect(undefined)}

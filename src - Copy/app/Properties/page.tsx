@@ -1,36 +1,36 @@
 // app/Properties/page.tsx
+
 import Hero2 from "../components/Hero2";
 import Footer from "../components/Footer";
 import PropertiesClientPage from "./PropertiesClientPage";
 import { getProperties } from "./data";
 import { getPropertyTypes } from "@/lib/getPropertyTypes";
-import { getPropertyLocations } from "@/lib/getPropertyLocations";
-import type { PropertyLocationTerm } from "@/lib/getPropertyLocations";
 
 type Props = {
-  searchParams: { type?: string; location?: string };
+  searchParams: { type?: string }; // e.g. ?type=agricultural-farmland
 };
 
 export default async function PropertiesPage({ searchParams }: Props) {
   const properties = await getProperties();
   const propertyTypes = await getPropertyTypes();
-  const locations: PropertyLocationTerm[] = await getPropertyLocations();
 
   const selectedSlug = searchParams.type?.trim() || undefined;
-  const selectedLocationSlug = searchParams.location?.trim() || undefined;
 
   return (
     <>
+
       <Hero2
-        heading_en={selectedSlug ? `Our Properties` : "Our Properties"}
+        heading_en={
+          selectedSlug
+            ? `Our Properties`
+            : "Our Properties"
+        }
         breadcrumbPosition="left"
       />
       <PropertiesClientPage
         properties={properties}
         propertyTypes={propertyTypes}
-        locations={locations}
         initialSelectedSlug={selectedSlug}
-        initialLocationSlug={selectedLocationSlug}
       />
       <Footer />
     </>

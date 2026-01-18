@@ -1,10 +1,10 @@
-// app/Properties/data.ts
 import { PropertyItem } from "../components/Property";
 
 type WPTerm = {
   taxonomy: string;
   name: string;
   slug: string;
+  // Add other properties if needed
 };
 
 type WPProperty = {
@@ -55,19 +55,12 @@ export async function getProperties(): Promise<PropertyItem[]> {
     const typeNames: string[] = [];
     const typeSlugs: string[] = [];
 
-    const locationNames: string[] = [];
-    const locationSlugs: string[] = [];
-
     const termGroups = p._embedded?.["wp:term"] ?? [];
     termGroups.forEach((group) => {
       group.forEach((term: WPTerm) => {
         if (term?.taxonomy === "property-type") {
           if (typeof term.name === "string") typeNames.push(term.name);
           if (typeof term.slug === "string") typeSlugs.push(term.slug);
-        }
-        if (term?.taxonomy === "property-location") {
-          if (typeof term.name === "string") locationNames.push(term.name);
-          if (typeof term.slug === "string") locationSlugs.push(term.slug);
         }
       });
     });
@@ -85,9 +78,6 @@ export async function getProperties(): Promise<PropertyItem[]> {
         "/fallback-property.jpg",
       typeNames,
       typeSlugs,
-      // NEW: used by the location dropdown filter
-      locationNames,
-      locationSlugs,
     };
   });
 }
