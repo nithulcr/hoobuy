@@ -12,7 +12,6 @@ export type PropertyItem = {
   land: string;
   location: string;
   price: string;
-  range: string;
   icon: string;
 };
 
@@ -43,17 +42,7 @@ export default function Property({ properties }: { properties: PropertyItem[] })
                                     height={400}
                                     className="aspect-[2/1.5] object-cover rounded-xl"
                                 />
-                                <div className="absolute top-[10px] right-[10px] flex gap-2">
-                                    <span className="bg-[#ffa500] text-white font-light text-xs rounded-full px-2 py-[4px] flex gap-1">
-                                        <Image
-                                            src="/crown.png"
-                                            alt="Premium"
-                                            width={14}
-                                            height={14}
-                                        />
-                                        {property.range}
-                                    </span>
-                                </div>
+                                
 
                               <Link href="" className="absolute bottom-[10px] right-[10px] bg-white p-1 rounded-full">
                                     <svg width="22" height="22" viewBox="0 0 24 24" className="whatsapp" fill="none" xmlns="http://www.w3.org/2000/svg">

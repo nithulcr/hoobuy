@@ -1,6 +1,7 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import HomePageClient from './components/HomePageClient';
 import { getLatestProperties } from '../lib/getProperties';
+import { getSoldProperties, SoldProperty } from './Properties/getSoldProperties'; // Import getSoldProperties and SoldProperty type
 
 // Define the Post interface
 interface Post {
@@ -53,6 +54,7 @@ export async function generateMetadata(
 
 export default async function HomePage() {
   const properties = await getLatestProperties();
+  const soldProperties: SoldProperty[] = await getSoldProperties(); // Fetch sold properties
   const posts: Post[] = await getPosts();
-  return <HomePageClient properties={properties} posts={posts} />;
+  return <HomePageClient properties={properties} posts={posts} soldProperties={soldProperties} />;
 }

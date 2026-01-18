@@ -6,8 +6,9 @@ export interface Property {
   land: string;
   location: string;
   price: string;
-  badge: string;
   link: string;
+
+  property_class?: "premium" | "standard" | "affordable" | "solded";
 }
 
 interface WordPressPropertyRaw {
@@ -26,7 +27,7 @@ interface WordPressPropertyRaw {
     land?: string;
     location?: string;
     price?: string;
-    badge?: string;
+     property_class?: "premium" | "standard" | "affordable" | "solded"; 
   };
   // Add other properties if needed
 }
@@ -73,11 +74,12 @@ export async function getLatestProperties(): Promise<Property[]> {
         land: acf.land ?? "N/A",
         location: acf.location ?? "N/A",
         price: acf.price ?? "N/A",
-        badge: acf.badge ?? "Premium",
         link: prop.link ?? "#", // WordPress API link, will be overridden in component
         icon:
           prop._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
           "/property1.jpg",
+
+          property_class: acf.property_class,
       };
     });
 

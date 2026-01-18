@@ -22,6 +22,8 @@ export type PropertyItem = {
 
     locationNames?: string[];
     locationSlugs?: string[];
+
+    property_class?: "premium" | "standard" | "affordable" | "solded";
 };
 
 export default function Property({ properties }: { properties: PropertyItem[] }) {
@@ -49,20 +51,56 @@ export default function Property({ properties }: { properties: PropertyItem[] })
                                     height={400}
                                     className="aspect-[2/1.5] object-cover rounded-md lg:rounded-xl"
                                 />
+                               
 
-                                {/* Top-right badge */}
                                 <div className="absolute top-[10px] right-[10px] flex gap-2">
-                                    <span className="bg-[#ffa500] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
-                                        <Image
-                                            src="/crown.png"
-                                            alt="Premium"
-                                            width={14}
-                                            height={14}
-                                            className="pl-[2px]"
-                                        />
-                                        {property.range}
-                                    </span>
+                                    {property.property_class === "premium" && (
+                                        <span className="bg-[#FFA500] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Premium"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Premium
+                                        </span>
+                                    )}
+
+                                    {property.property_class === "standard" && (
+                                        <span className="bg-[#1a3981] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Standard"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Standard
+                                        </span>
+                                    )}
+
+                                    {property.property_class === "affordable" && (
+                                        <span className="bg-[#16A34A] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Affordable"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Affordable
+                                        </span>
+                                    )}
+                                    {property.property_class === "solded" && (
+                                        <span className="bg-[#DC2626] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+
+                                            Solded
+                                        </span>
+                                    )}
                                 </div>
+
+
 
 
                             </span>

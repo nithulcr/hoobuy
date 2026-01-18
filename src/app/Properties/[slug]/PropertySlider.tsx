@@ -58,7 +58,7 @@ export default function PropertySlider({ images, title }: SliderProps) {
                 alt={`${title} ${idx + 1}`}
                 width={800}
                 height={420}
-                className="w-full h-[420px] object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
           ))}
@@ -100,13 +100,13 @@ export default function PropertySlider({ images, title }: SliderProps) {
       </div>
 
       {totalImages > 1 && (
-        <div className="thumb-row flex gap-2">
+        <div className="thumb-row grid grid-cols-6 gap-1 lg:gap-2">
           {safeImages.map((img, idx) => (
             <button
               key={img + idx}
               type="button"
               onClick={() => setActiveImage(idx)}
-              className={`border rounded-md overflow-hidden cursor-pointer ${
+              className={`border rounded-sm lg:rounded-md overflow-hidden cursor-pointer ${
                 idx === activeImage ? "border-site" : "border-transparent"
               }`}
             >
@@ -115,7 +115,7 @@ export default function PropertySlider({ images, title }: SliderProps) {
                 alt={`${title} ${idx + 1}`}
                 width={80}
                 height={64}
-                className="w-20 h-16 object-cover"
+                className="w-full aspect-[1/.7] object-cover"
               />
             </button>
           ))}

@@ -28,7 +28,7 @@ export default function Property({ properties }: { properties: PropertyItem[] })
                             Related Properties
                         </h2>
                     </div>
-                    <AnimatedButton label="View More" className="mt-6 w-fit" />
+                    <AnimatedButton href="/Properties" label="View More" className="mt-6 w-fit" />
                 </motion.div>
 
                 <div
@@ -42,18 +42,52 @@ export default function Property({ properties }: { properties: PropertyItem[] })
 
                             <span className="block relative">
                                 <Image src={property.icon} alt="image" width={400} height={400} className="aspect-[2/1.5] object-cover rounded-xl" />
-                                <div className="absolute top-[10px] right-[10px] flex gap-2">
+                               <div className="absolute top-[10px] right-[10px] flex gap-2">
+                                    {property.property_class === "premium" && (
+                                        <span className="bg-[#FFA500] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Premium"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Premium
+                                        </span>
+                                    )}
 
-                                    <span className="bg-[#ffa500] text-white font-light text-xs rounded-full px-2 py-[4px] flex  gap-1">
-                                        <Image
-                                                    src="/crown.png"
-                                                    alt="Business for Success"
-                                                    width={14}
-                                                    height={14}
-                                                    className=" "
-                                                  />
-                                         {property.range}</span>
+                                    {property.property_class === "standard" && (
+                                        <span className="bg-[#1a3981] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Standard"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Standard
+                                        </span>
+                                    )}
+                                   
 
+                                    {property.property_class === "affordable" && (
+                                        <span className="bg-[#16A34A] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                            <Image
+                                                src="/crown.png"
+                                                alt="Affordable"
+                                                width={14}
+                                                height={14}
+                                                className="pl-[2px]"
+                                            />
+                                            Affordable
+                                        </span>
+                                    )}
+                                     {property.property_class === "solded" && (
+                                        <span className="bg-[#DC2626] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                                           
+                                            Solded
+                                        </span>
+                                    )}
                                 </div>
                                 <Link href={`/Properties/${property.slug}`} className="absolute bottom-[10px] right-[10px] bg-white p-1 rounded-full">
                                     <svg width="22" height="22" viewBox="0 0 24 24" className="whatsapp" fill="none" xmlns="http://www.w3.org/2000/svg">

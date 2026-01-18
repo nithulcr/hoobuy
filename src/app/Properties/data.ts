@@ -12,18 +12,19 @@ type WPProperty = {
   slug: string;
   title: { rendered: string };
   acf?: {
-    badge?: string;
+ 
     price?: string;
     location?: string;
     land?: string;
-    range?: string;
+
+     property_class?: "premium" | "standard" | "affordable" | "solded";
   };
   meta?: {
-    badge?: string;
+ 
     price?: string;
     location?: string;
     land?: string;
-    range?: string;
+
   };
   _embedded?: {
     "wp:featuredmedia"?: { source_url: string }[];
@@ -32,11 +33,12 @@ type WPProperty = {
 };
 
 type PropertySource = {
-  badge?: string;
+
   price?: string;
   location?: string;
   land?: string;
-  range?: string;
+
+  property_class?: "premium" | "standard" | "affordable" | "solded";
 };
 
 export async function getProperties(): Promise<PropertyItem[]> {
@@ -79,7 +81,6 @@ export async function getProperties(): Promise<PropertyItem[]> {
       land: src.land ?? "",
       location: src.location ?? "",
       price: src.price ?? "",
-      range: src.range ?? src.badge ?? "",
       icon:
         p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
         "/fallback-property.jpg",
@@ -88,6 +89,7 @@ export async function getProperties(): Promise<PropertyItem[]> {
       // NEW: used by the location dropdown filter
       locationNames,
       locationSlugs,
+      property_class: src.property_class,
     };
   });
 }

@@ -23,6 +23,7 @@ import Process from "./Process";
 
 import Footer from "./Footer";
 import { Property } from "../../lib/getProperties"; // Import Property interface
+import { SoldProperty } from "../Properties/getSoldProperties"; // Import SoldProperty interface
 
 // Define the Post interface
 interface Post {
@@ -42,7 +43,7 @@ interface Post {
   };
 }
 
-export default function HomePageClient({ properties, posts }: { properties: Property[], posts: Post[] }) {
+export default function HomePageClient({ properties, posts, soldProperties }: { properties: Property[], posts: Post[], soldProperties: SoldProperty[] }) {
   const [showContent, setShowContent] = useState(false);
   const [shouldShowPreloader, setShouldShowPreloader] = useState(true);
 
@@ -74,7 +75,7 @@ export default function HomePageClient({ properties, posts }: { properties: Prop
           <AboutSection />
           <FeaturedProperty properties={properties} />
           <ProjectScroller />
-          <FeaturedProperty2 />
+          <FeaturedProperty2 properties={soldProperties} />
           <Features />
           <Services />
           <Countrys />

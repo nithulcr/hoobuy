@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const decodedContent = post.content.rendered ? he.decode(post.content.rendered) : '';
 
   return (
-    <>
+    <div className="">
      
 
       <section className="other-section pt-14 lg:pt-24 pb-1 lg:pb-20 overflow-hidden relative mt-[50px]">
@@ -172,6 +172,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

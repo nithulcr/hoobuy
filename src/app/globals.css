@@ -137,13 +137,12 @@ height:100%;
 .index-page .bg-nav-cover {
   top: -38px;
 }
+.bg-header-main {
+  background: var(--background);
+}
+
 .bg-nav-cover .main-header {
   height: 70px;
-}
-.page--blogs-slug, .page--Properties-slug {
-  .second-header{
-      background: white;
-  }
 }
 .menu-item {
   color: black;
@@ -502,7 +501,9 @@ h1 span{
   flex-direction: column;
   gap: 12px;
 }
-
+.bg-header-main .second-header{
+  background-color: white;
+}
 /* Make it stack on mobile */
 @media (max-width: 768px) {
   .property-page {

@@ -18,7 +18,7 @@ type WPProperty = {
   content: { rendered: string };
   acf?: {
     // main info
-    badge?: string;
+    property_class?: "premium" | "standard" | "affordable" | "solded";
     price?: string;
     location?: string;
     range?: string;
@@ -125,8 +125,8 @@ export default async function PropertyPage({ params }: PageProps) {
     imagesFromAcf.length > 0
       ? imagesFromAcf
       : featured
-      ? [featured]
-      : ["/fallback-property.jpg"];
+        ? [featured]
+        : ["/fallback-property.jpg"];
 
   const descriptionRaw =
     acf.property_summary ?? wpProperty.content.rendered ?? "";
@@ -136,9 +136,9 @@ export default async function PropertyPage({ params }: PageProps) {
     title: wpProperty.title.rendered,
     price: acf.price ?? "",
     location: acf.location ?? "",
-    range: acf.badge ?? acf.range ?? "",
     description: descriptionText,
     images,
+    property_class: acf.property_class,
   };
 
   // address values
@@ -178,18 +178,59 @@ export default async function PropertyPage({ params }: PageProps) {
 
   return (
     <div className="property-page">
-      <main className="pb-14 lg:pb-24 mx-auto px-1 lg:px-6 max-w-[1400px] py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[80px]">
+      <main className="pb-14 lg:pb-24 pt-5 lg:pt-10 mx-auto px-1 lg:px-6 max-w-[1400px]  grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[80px]">
         {/* LEFT: slider */}
         <PropertySlider images={property.images} title={property.title} />
 
         {/* RIGHT: details */}
         <div className="property-info flex-1 flex flex-col gap-3">
-          <div className="mt-2">
-            <span className="flex gap-2 items-center w-fit rounded-full bg-amber-500 text-white text-xs px-3 py-1">
-              <Image src="/crown.png" alt="Premium" width={14} height={14} />
-              {property.range}
-            </span>
+          <div className="mt-2 property_class flex gap-2">
+            {property.property_class === "premium" && (
+              <span className="bg-[#FFA500] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                <Image
+                  src="/crown.png"
+                  alt="Premium"
+                  width={14}
+                  height={14}
+                  className="pl-[2px]"
+                />
+                Premium
+              </span>
+            )}
+
+            {property.property_class === "standard" && (
+              <span className="bg-[#1a3981] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                <Image
+                  src="/crown.png"
+                  alt="Standard"
+                  width={14}
+                  height={14}
+                  className="pl-[2px]"
+                />
+                Standard
+              </span>
+            )}
+
+            {property.property_class === "affordable" && (
+              <span className="bg-[#16A34A] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+                <Image
+                  src="/crown.png"
+                  alt="Affordable"
+                  width={14}
+                  height={14}
+                  className="pl-[2px]"
+                />
+                Affordable
+              </span>
+            )}
+            {property.property_class === "solded" && (
+              <span className="bg-[#DC2626] text-white font-light text-[10px] lg:text-xs rounded-full px-1 py-[2px] lg:px-2 lg:py-[4px] flex gap-1">
+
+                Solded
+              </span>
+            )}
           </div>
+
 
           <h1 className="text-3xl font-semibold">{property.title}</h1>
           <p className="text-2xl text-site font-semibold">
@@ -207,14 +248,17 @@ export default async function PropertyPage({ params }: PageProps) {
             </p>
           </div>
 
-          <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4">
-            <AnimatedButton href="tel:7293335555" label="Contact Us" className="w-fit" />
-            <AnimatedButton
-              href={`https://wa.me/7293335555?text=${encodedWhatsAppMessage}`}
-              label="Whatsapp Us"
-              className="w-fit transparent-btn transparent-btn5 whatsapp-btn"
-            />
-          </div>
+          {property.property_class !== "solded" && (
+            <div className="mt-3 flex items-center flex-wrap gap-2 lg:gap-4 contact-buttons">
+              <AnimatedButton href="tel:7293335555" label="Contact Us" className="w-fit" />
+              <AnimatedButton
+                href={`https://wa.me/7293335555?text=${encodedWhatsAppMessage}`}
+                label="Whatsapp Us"
+                className="w-fit transparent-btn transparent-btn5 whatsapp-btn"
+              />
+            </div>
+          )}
+
 
           {/* Address */}
           <div className="bg-white rounded-2xl p-6 my-3">
@@ -408,10 +452,10 @@ export default async function PropertyPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-      </main>
+      </main >
 
       <FeaturedProperty3 properties={relatedProperties} />
       <Footer />
-    </div>
+    </div >
   );
 }
