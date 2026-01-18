@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useStaggeredFadeUp } from "./useStaggeredFadeUp";
 import Image from "next/image";
 import AnimatedButton from "./AnimatedButton";
-import { PropertyItem } from "../Properties/data"; // Import the PropertyItem type
+import { PropertyItem } from "./Property"; // Import the PropertyItem type
 
 export default function Property({ properties }: { properties: PropertyItem[] }) {
     const fadeRef = useRef<HTMLHeadingElement>(null);
