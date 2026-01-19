@@ -17,7 +17,7 @@ export default function PropertySlider({ images, title }: SliderProps) {
     (u) => typeof u === "string" && u.trim() !== ""
   );
 
-  const safeImages = cleaned.length ? cleaned : ["/fallback-property.jpg"];
+  const safeImages = cleaned.length ? cleaned : ["/bg.jpg"];
 
   const [activeImage, setActiveImage] = useState(0);
   const totalImages = safeImages.length || 1;

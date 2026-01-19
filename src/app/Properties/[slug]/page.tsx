@@ -21,7 +21,6 @@ type WPProperty = {
     property_class?: "premium" | "standard" | "affordable" | "solded";
     price?: string;
     location?: string;
-    range?: string;
     property_summary?: string;
 
     // gallery image IDs (ACF Image return = ID)
@@ -126,7 +125,7 @@ export default async function PropertyPage({ params }: PageProps) {
       ? imagesFromAcf
       : featured
         ? [featured]
-        : ["/fallback-property.jpg"];
+        : ["/bg.jpg"];
 
   const descriptionRaw =
     acf.property_summary ?? wpProperty.content.rendered ?? "";

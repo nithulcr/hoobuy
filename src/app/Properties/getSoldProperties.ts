@@ -48,7 +48,7 @@ export async function getSoldProperties(): Promise<SoldProperty[]> {
     slug: p.slug,
     icon:
       p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-      "/fallback-property.jpg",
+      "/bg.jpg",
     title: p.title.rendered,
     land: p.acf?.land ?? "",
     location: p.acf?.location ?? "",

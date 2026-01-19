@@ -86,7 +86,7 @@ export async function getProperties(): Promise<PropertyItem[]> {
       range: src.range ?? "", // Added range here
       icon:
         p._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-        "/fallback-property.jpg",
+        "/bg.jpg",
       typeNames,
       typeSlugs,
       // NEW: used by the location dropdown filter

@@ -77,7 +77,7 @@ export async function getLatestProperties(): Promise<Property[]> {
         link: prop.link ?? "#", // WordPress API link, will be overridden in component
         icon:
           prop._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-          "/property1.jpg",
+          "/bg.jpg",
 
           property_class: acf.property_class,
       };
